@@ -1,0 +1,318 @@
+/* Styles généraux de la section FAQ */
+.landing-faq {
+    width: 100%;
+    position: relative;
+  }
+  
+  .section-py {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .bg-body {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fa 100%, #e9ecef 100%);
+  } 
+  
+  
+  /* Container avec l'icône de fond */
+  .bg-icon-right {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .bg-icon-right img[data-speed="1"] {
+    opacity: 0.15;
+    max-width: 200px;
+    z-index: -1;
+  }
+  
+  /* Styles d'en-tête */
+  .landing-faq h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .landing-faq h2 img {
+    height: 35px;
+    width: auto;
+  }
+  
+  .landing-faq .display-5 {
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .landing-faq .fw-medium {
+    font-weight: 500;
+    color: #666;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Image sur le côté gauche */
+  .faq-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .scaleX-n1-rtl {
+    transform: scaleX(1);
+  }
+  
+  [dir="rtl"] .scaleX-n1-rtl {
+    transform: scaleX(-1);
+  }
+  
+  /* Style général de l'accordéon */
+  .accordion {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .accordion-item:last-child {
+    border-bottom: none;
+  }
+  
+  .accordion-header {
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-button {
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    color: #333;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: #5a8dee;
+    background-color: rgba(90, 141, 238, 0.05);
+    box-shadow: none;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(90, 141, 238, 0.3);
+  }
+  
+  .accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+     background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .accordion-button.collapsed::after {
+    transform: rotate(-90deg);
+  }
+  
+  /* Nouvelle animation pour que l'accordéon ne fasse pas bouger le reste */
+  .accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  
+  /* Ouvre le contenu sans affecter la position des autres éléments */
+  .accordion-item:has(.accordion-button:not(.collapsed)) .accordion-collapse {
+    max-height: 500px; /* Ajuste selon le contenu max */
+  }
+  
+  .accordion-body {
+    padding: 1.25rem 1.5rem;
+    background-color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .landing-faq .row {
+      flex-direction: column-reverse;
+    }
+    
+    .faq-image {
+      max-width: 70%;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section-py {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+    .accordion-button {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+    
+    .accordion-body {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .faq-image {
+      max-width: 90%;
+    }
+    
+    .landing-faq h2 {
+      font-size: 1.4rem;
+    }
+    
+    .landing-faq h2 img {
+      height: 28px;
+    }
+  }
+  
+  /* Utilitaires Bootstrap nécessaires si vous n'incluez pas Bootstrap complet */
+  .mb-2 {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .pb-4 {
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .me-3 {
+    margin-right: 1rem !important;
+  }
+  
+  .text-center {
+    text-align: center !important;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase !important;
+  }
+  
+  .d-flex {
+    display: flex !important;
+  }
+  
+  .justify-content-center {
+    justify-content: center !important;
+  }
+  
+  .align-items-center {
+    align-items: center !important;
+  }
+  
+  .position-absolute {
+    position: absolute !important;
+  }
+  
+  .top-0 {
+    top: 0 !important;
+  }
+  
+  .end-0 {
+    right: 0 !important;
+  }
+  
+  /* Classes utilitaires pour les tailles de texte */
+  .fs-4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .fw-bold {
+    font-weight: 700 !important;
+  }
+  
+  /* Définition de la classe mb-md-12 (spécifique à Bootstrap) */
+  @media (min-width: 768px) {
+    .mb-md-12 {
+      margin-bottom: 5rem !important;
+    }
+  }
+  
+  /* Classes pour la grille */
+  .container {
+    max-width: max-content;
+  }
+  
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  
+  .col-lg-5, .col-lg-7 {
+    position: relative;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 100px;
+  }
+  
+  @media (min-width: 992px) {
+    .col-lg-5 {
+      flex: 0 0 41.667%;
+      max-width: 41.667%;
+    }
+    
+    .col-lg-7 {
+      flex: 0 0 58.333%;
+      max-width: 58.333%;
+    }
+  }
+  
+  .gy-5 {
+    --bs-gutter-y: 3rem;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+  }
+  
+  .gy-5 > * {
+    margin-top: var(--bs-gutter-y);
+  }

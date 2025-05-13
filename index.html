@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porteil-liveERPinnov</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Votre CSS personnalisé -->
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/hero.css" rel="stylesheet">
+    <link href="css/naveBare.css" rel="stylesheet">
+    <link href="css/sectionModule.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Pricing.css">
+    <link rel="stylesheet" href="css/FaqSection.css">
+    <link rel="stylesheet" href="css/footer-section.css">
+    
+</head>
+<body>
+    <!-- Navbar convertie depuis React -->
+    <nav class="layout-navbar container shadow-none py-o">
+      <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
+        <!-- Logo -->
+        <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4">
+          <div class="navbar-brand app-brand-links demo d-flex py-0 py-lg-2 me-4">
+            
+              <span class="app-brand-logo demo">
+                <img src="assets/img//front-pages/logo/logo.png" alt="Logo ERP INNOV" style="width: 40px; height: 40px;" class="" />
+              </span>
+              <span class="innov-text ms-2">
+                ERP <span class="innov-text">INNOV</span>
+              </span>
+            
+          </div>
+          <!-- Icône du menu alignée à droite sur mobile uniquement -->
+          <button
+            class="navbar-toggler border-0 px-0 me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="toggleMenu"
+          >
+            <i class="ri-menu-fill ri-24px align-middle" id="menuIcon"></i>
+          </button>
+        </div>
+
+        <!-- Menu principal -->
+        <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto p-3 p-lg-0">
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingHero" id="nav-landingHero">
+                <i class="tf-icons ri-home-line"></i>
+                <span>Accueil</span>
+              </a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingPricing" id="nav-landingPricing">
+                <i class="tf-icons ri-price-tag-line"></i>
+                <span>Offres</span>
+              </a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingGestion" id="nav-landingGestion">
+                <i class="tf-icons ri-price-tag-line"></i>
+                <span>Gestion</span>
+              </a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingFAQ" id="nav-landingFAQ">
+                <i class="tf-icons ri-questionnaire-line"></i>
+                <span>FAQ</span>
+              </a>
+            </li>
+
+            <!-- Connexion et Inscription (affichés par défaut, seront masqués par JS si authentifié) -->
+            <li class="nav-item mx-2" id="loginItem">
+              <a href="/login" class="auth-link btn-login">
+                <i class="tf-icons ri-user-line me-md-1"></i>
+                <span class="d-inline">Connexion</span>
+              </a>
+            </li>
+            <li class="nav-item mx-2" id="registerItem">
+              <a href="/inscription" class="auth-link btn-inscription">
+                <i class="tf-icons ri-user-add-line me-md-1"></i>
+                <span class="d-inline">Inscription</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Hero -->
+        <section id="landingHero" class="d-flex align-items-center mb-5" style="padding-top: 70px; width: 100%;">
+            <!-- Background Animation -->
+            <div class="hero-bg">
+                <div class="gradient-blob blob-1"></div>
+                <div class="gradient-blob blob-2"></div>
+                <div class="gradient-blob blob-3"></div>
+            </div>
+            <div class="container position-relative">
+                <div class="row align-items-center min-vh-100">
+                    <!-- Text Content -->
+                    <div class="col-lg-6 hero-content" data-aos="fade-up">
+                        <!-- Title -->
+                        <h3 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+                            <span class="gradient-text">Nos solutions</span> adaptées pour votre
+                            <span class="highlight-text"> organisation</span>
+                        </h3>
+                        <!-- Description -->
+                        <p class="hero-description">
+                            <span>Découvrez comment ERP INNOV peut transformer votre activité. Que vous soyez entrepreneur individuel, TPE/PME en croissance, grande entreprise, association ou administration, nous vous offrons des solutions adaptées qui permettent :</span><br />
+                            • <b>Réduction des coûts opérationnels</b> : Optimisez vos dépenses et améliorez votre rentabilité.<br />
+                            • <b>Optimisation de la gestion</b> : Optimisez vos dépenses et améliorez votre rentabilité.<br />
+                            • <b>Croissance accélérée</b> : Adoptez des outils performants pour soutenir votre développement.
+                        </p>
+                        <!-- CTA Buttons -->
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+                            <a href="/login" class="btn-primary">
+                                <span>En savoir plus, inscription gratuite</span>
+                                <i class="ri-arrow-right-line ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Dashboard Preview -->
+                    <div class="col-lg-6 hero-dashboard" data-aos="fade-left" data-aos-delay="300">
+                        <div class="dashboard-wrapper">
+                            <img src="assets/img//front-pages/landing-page/hero-dashboard-light.png" alt="Dashboard Preview" class="dashboard-image" />
+                            <!-- Stats Cards -->
+                            <div class="stats-card stats-card-1">
+                                <div class="stats-indicator success"></div>
+                                <span>+24% Croissance</span>
+                            </div>
+                            <div class="stats-card stats-card-2">
+                                <div class="stats-indicator primary"></div>
+                                <span>35% d'économies sur vos coûts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+<!-- Section Modules / Gestion -->
+<section id="landingGestion" class="section-py" style="padding-top: 125px; width: 100%;">
+    <div class="container">
+        <div class="row gx-0 gy-6 gx-sm-6">
+            <div class="container bg-icon-left position-relative">
+                <h2 class="text-center mb-2">
+                    <span class="display-5 fs-4 fw-bold">SIMPLIFIER VOTRE GESTION</span>
+                </h2>
+                <p class="text-center fw-medium mb-10">
+                    Des outils adaptés pour gagner du temps et répondre à vos besoins
+                </p>
+            </div>
+            
+            <!-- Module CRM & Ventes -->
+            <div class="col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                <span class="badge rounded-pill bg-label-hover-primary fun-facts-icon mb-6 p-5">
+                    <i class="tf-icons ri-macbook-line ri-42px"></i>
+                </span>
+                <h2 class="fw-bold mb-0 fun-facts-text">
+                    CRM & Ventes
+                </h2>
+                <h6 class="mb-0 text-body">Le CRM vous aide à gérer vos clients de manière efficace et personnalisée.</h6>
+            </div>
+            
+            <!-- Module Comptabilité -->
+            <div class="col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                <span class="badge rounded-pill bg-label-hover-success fun-facts-icon mb-6 p-5">
+                    <i class="tf-icons ri-bank-line ri-42px"></i>
+                </span>
+                <h2 class="fw-bold mb-0 fun-facts-text">
+                    Comptabilité
+                </h2>
+                <h6 class="mb-0 text-body">Gérer de manière autonome votre comptabilité simple ou partie double</h6>
+            </div>
+            
+            <!-- Module Finance & Facturation -->
+            <div class="col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                <span class="badge rounded-pill bg-label-hover-success fun-facts-icon mb-6 p-5">
+                    <i class="tf-icons ri-bank-fill ri-42px"></i>
+                </span>
+                <h2 class="fw-bold mb-0 fun-facts-text">
+                    Finance & Facturation
+                </h2>
+                <h6 class="mb-0 text-body">Optimisez votre gestion financière. Paiement et Rapprochement bancaire</h6>
+            </div>
+            
+            <!-- Module Produit & Stock -->
+            <div class="col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                <span class="badge rounded-pill bg-label-hover-warning fun-facts-icon mb-6 p-5">
+                    <i class="tf-icons ri-product-hunt-line ri-42px"></i>
+                </span>
+                <h2 class="fw-bold mb-0 fun-facts-text">
+                    Produit & Stock
+                </h2>
+                <h6 class="mb-0 text-body">Gérer efficacement vos Produits, Services, Stocks, Achats et Expéditions</h6>
+            </div>
+            
+            <!-- Module Ressources Humaines -->
+            <div class="col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="500">
+                <span class="badge rounded-pill bg-label-hover-warning fun-facts-icon mb-6 p-5">
+                    <i class="tf-icons ri-account-circle-fill ri-42px"></i>
+                </span>
+                <h2 class="fw-bold mb-0 fun-facts-text">
+                    Ressources Humaines
+                </h2>
+                <h6 class="mb-0 text-body">Notre solution simplifie la gestion de vos RH avec des outils intuitifs</h6>
+            </div>
+            
+            <!-- Module Productivité -->
+            <div class="col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="600">
+                <span class="badge rounded-pill bg-label-hover-warning fun-facts-icon mb-6 p-5">
+                    <i class="tf-icons ri-line-chart-fill ri-42px"></i>
+                </span>
+                <h2 class="fw-bold mb-0 fun-facts-text">
+                    Productivité
+                </h2>
+                <h6 class="mb-0 text-body">Améliorez votre Productivité en gérant efficacement Projets et Tâches.</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- pricingPage -->
+<section id="landingPricing" class="pricing-section" style="padding-top: 120px;">
+    <div class="container">
+      <h2 class=" text-center">
+        <img src="assets/img/front-pages/icons/section-tilte-icon.png" alt="section icon" class="icon" />
+        <span class="text-uppercase">Nos offres</span>
+      </h2>
+
+      <p class="text-center">
+        Toutes nos offres incluent une suite complète d'outils pour gérer votre activité.<br />
+        Choisissez le plan qui correspond le mieux à vos besoins.
+      </p>
+
+      <h1 class="text-center gradient-text">SOLO</h1>
+
+      <p class="text-center">
+        Que vous soyez artisan, commerçant ou entrepreneur, notre solution ERP-CRM vous aide à gérer efficacement votre activité au quotidien.
+        De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d'un site web, nous avons une offre adaptée à vos besoins.
+      </p>
+
+      <div class="row g-4" id="pricingCardsContainer">
+        <!-- Les cartes de tarification seront injectées ici -->
+      </div>
+    </div>
+  </section>
+       
+        <!-- Section landingFAQ -->
+        <section id="landingFAQ" class="section-py bg-body landing-faq" style="padding-top: 120px;">
+          <div class="container bg-icon-right">
+              <!-- Section Header -->
+              <h2 class="text-center d-flex justify-content-center align-items-center mb-2">
+                  <img src="assets/img/front-pages/icons/section-tilte-icon.png" 
+                      alt="section title icon" 
+                      class="me-3" />
+                  <span class="text-uppercase">Questions fréquentes</span>
+              </h2>
+  
+              <h5 class="text-center mb-2">
+                  <span class="display-5 fs-4 fw-bold">Les réponses à vos questions</span>
+              </h5>
+  
+              <p class="text-center fw-medium mb-4 mb-md-12 pb-4">
+                  Découvrez les réponses aux questions les plus fréquentes sur notre solution ERP
+              </p>
+  
+              <div class="row gy-5">
+                  <!-- Image Column -->
+                  <div class="col-lg-5">
+                      <div class="text-center">
+                          <img src="assets/img/front-pages/landing-page/sitting-girl-with-laptop.png" 
+                              alt="sitting girl with laptop" 
+                              class="faq-image scaleX-n1-rtl" />
+                      </div>
+                  </div>
+  
+                  <!-- FAQ Accordion -->
+                  <div class="col-lg-7">
+                      <div class="accordion" id="accordionFront">
+                          <!-- FAQ Item 1 -->
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="head-One">
+                                  <button type="button" 
+                                      class="accordion-button collapsed" 
+                                      data-bs-toggle="collapse" 
+                                      data-bs-target="#accordionOne">
+                                      Qu'est-ce qu'un ERP SaaS ?
+                                  </button>
+                              </h2>
+                              <div id="accordionOne" 
+                                  class="accordion-collapse collapse" 
+                                  data-bs-parent="#accordionFront">
+                                  <div class="accordion-body">
+                                      Un ERP SaaS (Software as a Service) est une solution de gestion d'entreprise accessible via internet. Notre solution vous permet de gérer l'ensemble de votre activité (clients, stocks, facturation, comptabilité) sans installation logicielle, avec une simple connexion internet.
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- FAQ Item 2 -->
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="head-Two">
+                                  <button type="button" 
+                                      class="accordion-button" 
+                                      data-bs-toggle="collapse" 
+                                      data-bs-target="#accordionTwo">
+                                      Comment débuter avec ERPINNOV ?
+                                  </button>
+                              </h2>
+                              <div id="accordionTwo" 
+                                  class="accordion-collapse collapse show" 
+                                  data-bs-parent="#accordionFront">
+                                  <div class="accordion-body">
+                                      Il suffit de créer un compte gratuit pour commencer. Vous aurez accès à tous les modules de base immédiatement. Notre équipe vous accompagne dans la prise en main avec une formation initiale et une documentation complète.
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- FAQ Item 3 -->
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="head-Three">
+                                  <button type="button" 
+                                      class="accordion-button collapsed" 
+                                      data-bs-toggle="collapse" 
+                                      data-bs-target="#accordionThree">
+                                      Mes données sont-elles sécurisées ?
+                                  </button>
+                              </h2>
+                              <div id="accordionThree" 
+                                  class="accordion-collapse collapse" 
+                                  data-bs-parent="#accordionFront">
+                                  <div class="accordion-body">
+                                      La sécurité est notre priorité. Vos données sont hébergées en France, sauvegardées quotidiennement et protégées par un chiffrement avancé. Nous respectons strictement le RGPD et garantissons la confidentialité de vos informations.
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- FAQ Item 4 -->
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="head-Four">
+                                  <button type="button" 
+                                      class="accordion-button collapsed" 
+                                      data-bs-toggle="collapse" 
+                                      data-bs-target="#accordionFour">
+                                      Puis-je changer d'offre à tout moment ?
+                                  </button>
+                              </h2>
+                              <div id="accordionFour" 
+                                  class="accordion-collapse collapse" 
+                                  data-bs-parent="#accordionFront">
+                                  <div class="accordion-body">
+                                      Oui, vous pouvez facilement upgrader ou downgrader votre abonnement à tout moment. Vos données sont conservées et vous ne payez que la différence de prix au prorata temporis.
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- FAQ Item 5 -->
+                          <div class="accordion-item">
+                              <h2 class="accordion-header" id="head-Five">
+                                  <button type="button" 
+                                      class="accordion-button collapsed" 
+                                      data-bs-toggle="collapse" 
+                                      data-bs-target="#accordionFive">
+                                      Quel support est inclus ?
+                                  </button>
+                              </h2>
+                              <div id="accordionFive" 
+                                  class="accordion-collapse collapse" 
+                                  data-bs-parent="#accordionFront">
+                                  <div class="accordion-body">
+                                      Chaque offre inclut un niveau de support adapté. De l'assistance par email pour l'offre Solo au support prioritaire avec accompagnement personnalisé pour l'offre Premium. Notre équipe technique est basée à Madagascar et disponible pour vous aider.
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+    </main>
+
+      <section>
+        <footer class="landing-footer" id="footer">
+            <!-- Footer Top -->
+            <div class="footer-top position-relative overflow-hidden" style="padding-top:8%; width: 100%;">
+                <div class="container position-relative">
+                    <div class="row gx-0 gy-7 gx-sm-6 gx-lg-12">
+                        <!-- Logo et Newsletter -->
+                        <div class="col-lg-5 d-flex flex-column">
+                            <a href="/" class="app-brand-link mb-6">
+                                <span class="app-brand-logo demo me-2">
+                                    <!-- Logo -->
+                                </span>
+                                <span class="app-brand-text demo footer-link fw-semibold ms-1">ERP INNOV</span>
+                            </a>
+
+                            <p class="footer-text footer-logo-description mb-6">
+                                ERP Innov: La Gestion Intelligente à Portée de Main. Simplifiez, Innovez, Prospérez.
+                            </p>
+
+                            <!-- Contact en bas -->
+                            <ul class="list-unstyled mt-auto">
+                                <li class="mb-4">
+                                    <a href="mailto:contact@erpinnov.com" class="footer-link">contact@erpinnov.com</a>
+                                </li>
+                            </ul>
+                            <form id="newsletter-form">
+                                <div class="d-flex mt-2 gap-4">
+                                    <div class="form-floating form-floating-outline w-px-250">
+                                        <input 
+                                            type="email"
+                                            class="form-control bg-transparent rounded-3"
+                                            id="newsletter-1"
+                                            placeholder="Votre email" 
+                                        />
+                                        <label for="newsletter-1">S'inscrire à la newsletter</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Rester informé</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Menu ERP INNOV -->
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <h6 class="footer-title mb-4 mb-lg-6">ERP INNOV</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-4">
+                                    <a href="#landingFeatures" class="footer-link">Fonctionnalités</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#landingPricing" class="footer-link">Tarifs</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#landingFAQ" class="footer-link">FAQ</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#landingContact" class="footer-link">Contact</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="/demo" class="footer-link">Démonstration</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu Légal -->
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <h6 class="footer-title mb-4 mb-lg-6">Légal</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-4">
+                                    <a href="/confidentialite" class="footer-link">Confidentialité</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="/cgv" class="footer-link">CGV</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="/connexion" class="footer-link">Connexion</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="col-lg-3 col-md-4">
+                            <h6 class="footer-title mb-4 mb-lg-6">Contact</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-4">
+                                    <i class="me-2 ri-map-pin-line"></i>
+                                    <span class="footer-text">Madagascar</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom py-5">
+                <div class="container d-flex flex-wrap justify-content-between">
+                    <div class="mb-2 mb-md-0">
+                        <span class="footer-text">© <span id="current-year"></span> ERP INNOV. Tous droits réservés. </span>
+                        <span class="footer-text">Mentions légales</span>
+                    </div>
+                    <div>
+                        <a href="#" class="footer-link me-4" target="_blank" rel="noreferrer">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                        <a href="#" class="footer-link me-4" target="_blank" rel="noreferrer">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="footer-link me-4" target="_blank" rel="noreferrer">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Votre JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/hero-section.js"></script>
+    <script src="js/sectionModule.js"></script>
+    <script src="js/pricing.js"></script>
+    <script src=" js/princing.js"></script>
+    <script src="footer-section.js"></script>
+
+</body>
+</html>
