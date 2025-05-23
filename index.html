@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Meta viewport important pour le responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porteil-liveERPinnov</title>
@@ -18,24 +19,68 @@
     <link rel="stylesheet" href="css/FaqSection.css">
     <link rel="stylesheet" href="css/footer-section.css">
     
+    <style>
+        /* Corrections responsive supplémentaires */
+        @media (max-width: 767.98px) {
+            /* Ajustements navbar */
+            .navbar-brand {
+                padding: 0.5rem 0;
+            }
+            
+            /* Hero section */
+            .hero-content {
+                text-align: center;
+                padding-top: 2rem;
+            }
+            
+            .hero-dashboard {
+                margin-top: 2rem;
+            }
+            
+            /* Section modules */
+            .fun-facts-icon {
+                padding: 1.5rem !important;
+            }
+            
+            /* Footer */
+            .footer-top {
+                padding-top: 4rem !important;
+            }
+            
+            .footer-title {
+                margin-top: 2rem;
+            }
+            
+            /* FAQ section */
+            .faq-image {
+                max-width: 80%;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            /* Ajustements pour tablettes */
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar convertie depuis React -->
-    <nav class="layout-navbar container shadow-none py-o">
-      <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
-        <!-- Logo -->
-        <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4">
-          <div class="navbar-brand app-brand-links demo d-flex py-0 py-lg-2 me-4">
-            
-              <span class="app-brand-logo demo">
-                <img src="assets/img//front-pages/logo/logo.png" alt="Logo ERP INNOV" style="width: 40px; height: 40px;" class="" />
-              </span>
-              <span class="innov-text ms-2">
-                ERP <span class="innov-text">INNOV</span>
-              </span>
-            
+    <nav class="layout-navbar container shadow-none py-0">
+        <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
+          <!-- Logo -->
+          <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4 align-items-center">
+            <span class="app-brand-logo demo">
+              <img src="assets/img/front-pages/logo/logo.png" alt="Logo ERP INNOV" style="width: 40px; height: 40px;" />
+            </span>
+            <span class="innov-text ms-2">
+              ERP <span class="innov-text">INNOV</span>
+            </span>
           </div>
-          <!-- Icône du menu alignée à droite sur mobile uniquement -->
+      
+          <!-- Bouton toggler pour mobile -->
           <button
             class="navbar-toggler border-0 px-0 me-2"
             type="button"
@@ -48,53 +93,54 @@
           >
             <i class="ri-menu-fill ri-24px align-middle" id="menuIcon"></i>
           </button>
+      
+          <!-- Menu principal -->
+          <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto p-3 p-lg-0">
+              <li class="nav-item mx-2">
+                <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingHero" id="nav-landingHero">
+                  <i class="tf-icons ri-home-line"></i>
+                  <span>Accueil</span>
+                </a>
+              </li>
+           
+              <li class="nav-item mx-2">
+                <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingGestion" id="nav-landingGestion">
+                  <i class="tf-icons ri-price-tag-line"></i>
+                  <span>Gestion</span>
+                </a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingPricing" id="nav-landingPricing">
+                  <i class="tf-icons ri-price-tag-line"></i>
+                  <span>Offres</span>
+                </a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingFAQ" id="nav-landingFAQ">
+                  <i class="tf-icons ri-questionnaire-line"></i>
+                  <span>FAQ</span>
+                </a>
+              </li>
+      
+              <!-- Connexion et Inscription -->
+              <li class="nav-item mx-2" id="loginItem">
+                <a href="/login" class="auth-link btn-login d-flex align-items-center">
+                  <i class="tf-icons ri-user-line me-md-1"></i>
+                  <span class="d-inline">Connexion</span>
+                </a>
+              </li>
+              <li class="nav-item mx-2" id="registerItem">
+                <a href="/inscription" class="auth-link btn-inscription d-flex align-items-center">
+                  <i class="tf-icons ri-user-add-line me-md-1"></i>
+                  <span class="d-inline">Inscription</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!-- Menu principal -->
-        <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto p-3 p-lg-0">
-            <li class="nav-item mx-2">
-              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingHero" id="nav-landingHero">
-                <i class="tf-icons ri-home-line"></i>
-                <span>Accueil</span>
-              </a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingPricing" id="nav-landingPricing">
-                <i class="tf-icons ri-price-tag-line"></i>
-                <span>Offres</span>
-              </a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingGestion" id="nav-landingGestion">
-                <i class="tf-icons ri-price-tag-line"></i>
-                <span>Gestion</span>
-              </a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingFAQ" id="nav-landingFAQ">
-                <i class="tf-icons ri-questionnaire-line"></i>
-                <span>FAQ</span>
-              </a>
-            </li>
-
-            <!-- Connexion et Inscription (affichés par défaut, seront masqués par JS si authentifié) -->
-            <li class="nav-item mx-2" id="loginItem">
-              <a href="/login" class="auth-link btn-login">
-                <i class="tf-icons ri-user-line me-md-1"></i>
-                <span class="d-inline">Connexion</span>
-              </a>
-            </li>
-            <li class="nav-item mx-2" id="registerItem">
-              <a href="/inscription" class="auth-link btn-inscription">
-                <i class="tf-icons ri-user-add-line me-md-1"></i>
-                <span class="d-inline">Inscription</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
+      
 
     <!-- Contenu principal -->
     <main>
@@ -391,121 +437,96 @@
   
     </main>
 
-      <section>
-        <footer class="landing-footer" id="footer">
-            <!-- Footer Top -->
-            <div class="footer-top position-relative overflow-hidden" style="padding-top:8%; width: 100%;">
-                <div class="container position-relative">
-                    <div class="row gx-0 gy-7 gx-sm-6 gx-lg-12">
-                        <!-- Logo et Newsletter -->
-                        <div class="col-lg-5 d-flex flex-column">
-                            <a href="/" class="app-brand-link mb-6">
-                                <span class="app-brand-logo demo me-2">
-                                    <!-- Logo -->
-                                </span>
-                                <span class="app-brand-text demo footer-link fw-semibold ms-1">ERP INNOV</span>
-                            </a>
-
-                            <p class="footer-text footer-logo-description mb-6">
-                                ERP Innov: La Gestion Intelligente à Portée de Main. Simplifiez, Innovez, Prospérez.
-                            </p>
-
-                            <!-- Contact en bas -->
-                            <ul class="list-unstyled mt-auto">
-                                <li class="mb-4">
-                                    <a href="mailto:contact@erpinnov.com" class="footer-link">contact@erpinnov.com</a>
-                                </li>
-                            </ul>
-                            <form id="newsletter-form">
-                                <div class="d-flex mt-2 gap-4">
-                                    <div class="form-floating form-floating-outline w-px-250">
-                                        <input 
-                                            type="email"
-                                            class="form-control bg-transparent rounded-3"
-                                            id="newsletter-1"
-                                            placeholder="Votre email" 
-                                        />
-                                        <label for="newsletter-1">S'inscrire à la newsletter</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Rester informé</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Menu ERP INNOV -->
-                        <div class="col-lg-2 col-md-4 col-sm-6">
-                            <h6 class="footer-title mb-4 mb-lg-6">ERP INNOV</h6>
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-4">
-                                    <a href="#landingFeatures" class="footer-link">Fonctionnalités</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="#landingPricing" class="footer-link">Tarifs</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="#landingFAQ" class="footer-link">FAQ</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="#landingContact" class="footer-link">Contact</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="/demo" class="footer-link">Démonstration</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Menu Légal -->
-                        <div class="col-lg-2 col-md-4 col-sm-6">
-                            <h6 class="footer-title mb-4 mb-lg-6">Légal</h6>
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-4">
-                                    <a href="/confidentialite" class="footer-link">Confidentialité</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="/cgv" class="footer-link">CGV</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="/connexion" class="footer-link">Connexion</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Contact -->
-                        <div class="col-lg-3 col-md-4">
-                            <h6 class="footer-title mb-4 mb-lg-6">Contact</h6>
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-4">
-                                    <i class="me-2 ri-map-pin-line"></i>
-                                    <span class="footer-text">Madagascar</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom py-5">
-                <div class="container d-flex flex-wrap justify-content-between">
-                    <div class="mb-2 mb-md-0">
-                        <span class="footer-text">© <span id="current-year"></span> ERP INNOV. Tous droits réservés. </span>
-                        <span class="footer-text">Mentions légales</span>
-                    </div>
-                    <div>
-                        <a href="#" class="footer-link me-4" target="_blank" rel="noreferrer">
-                            <i class="ri-facebook-circle-fill"></i>
-                        </a>
-                        <a href="#" class="footer-link me-4" target="_blank" rel="noreferrer">
-                            <i class="ri-linkedin-fill"></i>
-                        </a>
-                        <a href="#" class="footer-link me-4" target="_blank" rel="noreferrer">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </section>
+     <!-- ===== FOOTER ===== -->
+<footer class="landing-footer" id="footer">
+    <!-- Bande supérieure -->
+    <div class="footer-top position-relative overflow-hidden py-5">
+      <div class="container position-relative">
+        <div class="row gy-7 gx-lg-5">
+          <!-- Logo + newsletter -->
+          <div class="col-lg-5 d-flex flex-column">
+            <a href="/" class="d-inline-flex align-items-center mb-4">
+              <img src="assets/img/front-pages/logo/logo.png"
+                   alt="Logo ERP INNOV"
+                   width="40"
+                   class="me-2" />
+              <span class="fw-semibold fs-5 footer-link">ERP INNOV</span>
+            </a>
+  
+            <p class="footer-text footer-logo-description mb-4">
+              ERP Innov : la gestion intelligente à portée de main.<br>
+              Simplifiez, innovez, prospérez.
+            </p>
+  
+            <ul class="list-unstyled mb-4">
+              <li>
+                <a href="mailto:contact@erpinnov.com" class="footer-link">
+                  contact@erpinnov.com
+                </a>
+              </li>
+            </ul>
+  
+            <form id="newsletter-form" class="d-flex gap-2 flex-wrap">
+              <input type="email"
+                     class="form-control bg-transparent rounded-3 w-auto flex-grow-1"
+                     placeholder="Votre email"
+                     required />
+              <button type="submit" class="btn btn-primary flex-shrink-0">
+                Rester informé
+              </button>
+            </form>
+          </div>
+  
+          <!-- Menu ERP INNOV -->
+          <div class="col-lg-2 col-md-4 col-6">
+            <h6 class="footer-title">ERP INNOV</h6>
+            <ul class="list-unstyled">
+              <li><a href="#landingFeatures" class="footer-link">Fonctionnalités</a></li>
+              <li><a href="#landingPricing"   class="footer-link">Tarifs</a></li>
+              <li><a href="#landingFAQ"       class="footer-link">FAQ</a></li>
+              <li><a href="#landingContact"   class="footer-link">Contact</a></li>
+              <li><a href="/demo"             class="footer-link">Démonstration</a></li>
+            </ul>
+          </div>
+  
+          <!-- Menu Légal -->
+          <div class="col-lg-2 col-md-4 col-6">
+            <h6 class="footer-title">Légal</h6>
+            <ul class="list-unstyled">
+              <li><a href="/confidentialite" class="footer-link">Confidentialité</a></li>
+              <li><a href="/cgv"            class="footer-link">CGV</a></li>
+              <li><a href="/connexion"      class="footer-link">Connexion</a></li>
+            </ul>
+          </div>
+  
+          <!-- Contact rapide -->
+          <div class="col-lg-3 col-md-4">
+            <h6 class="footer-title">Contact</h6>
+            <p class="footer-text mb-2">
+              <i class="ri-map-pin-line me-1"></i> Madagascar
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bande inférieure -->
+    <div class="footer-bottom">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div class="footer-text small mb-3 mb-md-0">
+          © <span id="current-year"></span> ERP INNOV — Tous droits réservés ·
+          <a href="/mentions-legales" class="footer-link">Mentions légales</a>
+        </div>
+  
+        <div>
+          <a href="#" class="footer-link me-3"><i class="ri-facebook-circle-fill"></i></a>
+          <a href="#" class="footer-link me-3"><i class="ri-linkedin-fill"></i></a>
+          <a href="#" class="footer-link"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
