@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="css/FaqSection.css">
     <link rel="stylesheet" href="css/footer-section.css">
     
+    
+   
+    
     <style>
         /* Corrections responsive supplémentaires */
         @media (max-width: 767.98px) {
@@ -277,36 +280,691 @@
     </div>
 </section>
 
-<!-- pricingPage -->
-<section id="landingPricing" class="pricing-section" style="padding-top: 120px;">
-    <div class="container">
-      <h2 class=" text-center">
-        <img src="assets/img/front-pages/icons/section-tilte-icon.png" alt="section icon" class="icon" />
-        <span class="text-uppercase">Nos offres</span>
-      </h2>
 
-      <p class="text-center">
-        Toutes nos offres incluent une suite complète d'outils pour gérer votre activité.<br />
-        Choisissez le plan qui correspond le mieux à vos besoins.
-      </p>
 
-      <h1 class="text-center gradient-text">SOLO</h1>
 
-      <p class="text-center">
-        Que vous soyez artisan, commerçant ou entrepreneur, notre solution ERP-CRM vous aide à gérer efficacement votre activité au quotidien.
-        De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d'un site web, nous avons une offre adaptée à vos besoins.
-      </p>
 
-      <div class="row g-4" id="pricingCardsContainer">
-        <!-- Les cartes de tarification seront injectées ici -->
+
+
+<!-- pricingPage Nos offres 
+
+
+-->
+
+<!-- Intègre aussi dans <head> : 
+
+-->
+<section id="pricingSection">
+  <h2><span>//</span> NOS OFFRES</h2>
+
+  
+<!-- Style ccs à recopier -->
+<style>
+  #pricingSection {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 0 15px;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+  }
+
+  #pricingSection h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+  }
+
+  #pricingSection h2 span {
+    color: #276ef1;
+    font-weight: 900;
+  }
+
+  /* Encadré SOLO */
+  .solo-box {
+    max-width: 700px;
+    margin: 40px auto 50px;
+    padding: 30px 35px;
+    border-radius: 20px;
+    background-color: #e6f0ff;
+    box-shadow: 0 8px 25px rgba(39, 110, 241, 0.15);
+    text-align: center;
+    color: #1848c9;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  .solo-box h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+  .solo-box p {
+    color: #2a2a2a;
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Accordéon toggle */
+  #toggleOffers {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #187bff;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
+  /* Offre déroulante */
+  #offersContent {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+  }
+  #offersContent.open {
+    max-height: 2000px;
+  }
+
+  #offersContent h3 {
+    text-align: center;
+    color: #276ef1;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  #offersContent p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+
+  /* Colonnes offres */
+  .offer-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    max-width: 960px;
+    margin: auto;
+  }
+  @media (max-width: 1000px) {
+    .offer-wrapper {
+      flex-wrap: wrap;
+    }
+  }
+
+  .offer-card {
+    flex: 0 0 300px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .offer-card h4 {
+    color: #276ef1;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .offer-card .price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #276ef1;
+    margin-bottom: 5px;
+  }
+
+  .offer-card .price small {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .offer-card .currency-mga {
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #444;
+  }
+
+  .offer-card ul {
+    list-style: none;
+    padding-left: 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    flex-grow: 1;
+  }
+
+  .offer-card li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .offer-card li svg {
+    margin-right: 10px;
+    flex-shrink: 0;
+    fill: #276ef1;
+    width: 18px;
+    height: 18px;
+  }
+
+  .offer-card a.btn-inscrire {
+    display: block;
+    margin-top: 30px;
+    padding: 14px 0;
+    text-align: center;
+    background-color: #276ef1;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .offer-card a.btn-inscrire:hover {
+    background-color: #1848c9;
+  }
+
+  .offer-card p.try-free {
+    text-align: center;
+    color: #777;
+    margin-top: 12px;
+    font-size: 0.95rem;
+  }
+</style>
+ <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+
+<!-- oFFRE DoliSaas-->
+<div style="max-width: 960px; margin: 50px auto; font-family: 'Inter', sans-serif; color: #1a376c; line-height: 1.7;">
+
+  <h2 style="color: #276ef1;">Qu’est-ce que Dolibarr&nbsp;?</h2>
+  <img src="assets/img/front-pages/dolibarr_logo.svg" alt="Logo Dolibarr ERP CRM" />
+  <p>
+    <strong>Dolibarr ERP/CRM</strong> est une solution open source reconnue dans le monde entier pour la gestion d’entreprise. Elle regroupe dans un seul outil :
+    la gestion des clients, des devis, des factures, des stocks, de la comptabilité, des projets, des ressources humaines, et bien plus encore.
+  </p>
+
+  <p>
+    C’est un outil puissant, modulable et gratuit, utilisé par des milliers de TPE, PME, indépendants et associations. Cependant, sa richesse fonctionnelle peut
+    parfois dérouter les utilisateurs non techniques ou ceux qui souhaitent une solution immédiatement opérationnelle, sans configuration complexe.
+  </p>
+
+  <hr style="margin: 40px auto; width: 80px; height: 3px; background: linear-gradient(90deg, #276ef1 0%, #b3d1ff 100%); border: none; border-radius: 2px;" />
+
+  <h2 style="color: #276ef1;">Pourquoi DoliSaaS&nbsp;?</h2>
+  </div>
+<section id="pricingSection">
+
+    
+    <div style="
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: #d9e7ff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a376c;
+">
+
+  
+
+  <div >
+    <h3 style="font-size: 2rem; font-weight: 900; margin-bottom: 15px; color: #276ef1;">DoliSaas - Dolibarr en ligne</h3>
+    
+  
+    
+    
+<table style="width: 100%; max-width: 1000px; margin: 40px auto;">
+  <tr>
+    <td style="width: 300px; vertical-align: top; padding-right: 20px;">
+
+  <!-- Image à gauche -->
+
+
+
+    <img src="assets/img/front-pages/dolibarr-pdf-bien-gerer-son-entreprisec2171d20240202113929-image_cover.jpg" alt="Documentation Dolibarr offerte d'une valeur de 32€ pour tout abonnement" style="width: 100%; height: auto; border-radius: 15px; object-fit: cover;"/>
+    Livre offert pour tout abonnement 
+    
+ </td>
+    <td style="vertical-align: top;">
+
+ <!-- texte à droite -->
+
+      <p>
+    Pour simplifier l’accès à Dolibarr, nous avons conçu <strong>DoliSaaS</strong>&nbsp;: une version en ligne, prête à l’emploi, accessible sans aucun besoin de serveur ou de technicien.
+  </p>
+
+  <p>
+    Que vous soyez artisan, commerçant ou entrepreneur, notre solution <strong>DoliSaaS</strong> vous aide à gérer efficacement votre activité au quotidien.
+    De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d’un site web, nous avons une offre simple et opérationnelle.
+  </p>
+
+  <ul style="padding-left: 20px; margin-top: 15px;">
+    <li>✅ <strong>Clé en main</strong> : pas d’installation, pas de maintenance, pas de prise de tête.</li>
+    <li>☁️ <strong>Hébergement sécurisé</strong> sur des serveurs performants en France.</li>
+    <li>📘 <strong>Documentation complète</strong> et <strong>livre offert</strong> (valeur 32 €) pour tout abonnement.</li>
+    <li>🧾 <strong>Plans comptables inclus</strong> : PCG 2005 (Madagascar) et PCG 2014 (France).</li>
+    <li>🎓 Tutoriels vidéo, forum communautaire, FAQ, et assistance de base intégrée.</li>
+    <li>🎁 <strong>Essai gratuit 14 jours</strong> sans engagement.</li>
+  </ul>
+
+  <p style="margin-top: 25px; font-style: italic;">
+    Avec DoliSaaS, vous bénéficiez de toute la puissance de Dolibarr, sans la complexité technique.
+  </p>
+
+ 
+  
+</td>
+  </tr>
+  
+   
+</table>
+ </div>
+</div>
+  <p id="toggleOffers">En savoir plus sur nos offres &nbsp;&raquo;</p>
+
+  <div id="offersContent" aria-hidden="true">
+
+    <h3>SOLO : Trois formules adaptées à vos besoins</h3>
+
+    <p class="intro">
+  
+
+<ul style="list-style-type: none; padding-left: 0; color: #444; font-size: 1rem;">
+    <li style="margin-bottom: 15px;">
+      <strong style="color:#276ef1;">Basic</strong> : L’essentiel pour démarrer facilement avec un utilisateur, la gestion des clients, produits, devis, factures et comptabilité simple adaptée à Madagascar. Idéal pour les indépendants et micro-entrepreneurs.
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong style="color:#276ef1;">Standard</strong> : Pour les artisans avec des besoins avancés, cette formule ajoute le suivi des interventions, gestion des garanties, statistiques en temps réel et jusqu’à deux utilisateurs, ainsi qu’un email professionnel intégré.
+    </li>
+    <li>
+      <strong style="color:#276ef1;">Premium</strong> : La gestion complète avec la comptabilité analytique avancée, le calcul automatisé des coûts, le suivi du temps par projet, jusqu’à trois utilisateurs et options de stockage supplémentaires.
+    </li>
+  </ul>
+  <p style="font-size: 1rem; color: #444; margin-top: 20px; text-align: center; font-style: italic;">
+    Profitez d’une solution clé en main, hébergée en toute sécurité, avec un essai gratuit de 14 jours, sans engagement.
+  </p>
+    </p>
+
+    <div class="offer-wrapper">
+
+      <!-- Basic -->
+      <div class="offer-card">
+        <h4>Basic</h4>
+        <div class="price">€5.00 <small>/mois</small></div>
+        <div class="currency-mga">25 500 MGA</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des tiers</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des produits</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des clients et prospects (CRM)</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Création de devis et factures</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des stocks et approvisionnements</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité simple (Plan Comptable Général Madagascar)</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi des projets et chantiers</li>
+        </ul>
+        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
       </div>
+
+      <!-- Standard -->
+      <div class="offer-card">
+        <h4>Standard</h4>
+        <div class="price">€8.00 <small>/mois</small></div>
+        <div class="currency-mga">40 000 MGA</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Basic inclus</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Rapports et statistiques en temps réel</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Email professionnel intégré</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des interventions et planning</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des garanties et SAV (ticketing)</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 2 utilisateurs</li>
+        </ul>
+        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+      </div>
+
+      <!-- Premium -->
+      <div class="offer-card">
+        <h4>Premium</h4>
+        <div class="price">€16.00 <small>/mois</small></div>
+        <div class="currency-mga">80 000 MGA</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Standard inclus</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité analytique avancée</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Calcul automatisé des coûts et marges</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi du temps passé par projet</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 3 utilisateurs</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Option : stockage supplémentaire (+Go en option)</li>
+        </ul>
+        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+      </div>
+
     </div>
-  </section>
+  </div>
+
+</section>
+
+<script>
+  const toggleBtn = document.getElementById('toggleOffers');
+  const offersContent = document.getElementById('offersContent');
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = offersContent.classList.toggle('open');
+    toggleBtn.textContent = isOpen ? '«' : 'En savoir plus sur nos offres »';
+    offersContent.setAttribute('aria-hidden', !isOpen);
+  });
+</script>
+   
+
+
+<!-- Seperateur -->
+  <hr style="
+  border: none;
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #276ef1 0%, #b3d1ff 100%);
+  border-radius: 2px;
+  margin: 40px auto;
+" />
+
+<!-- EPR INNOV ->
+<div style="max-width: 1000px; margin: 40px auto; font-family: 'Inter', Arial, sans-serif; color: #1a376c; line-height: 1.6;">
+
+  
+
+  <!-- ERPINNOV -->
+  
+ 
+
+  <div style="max-width: 960px; margin: 40px auto; font-family: 'Inter', sans-serif; line-height: 1.7; color: #1a376c;">
+
+  <h2 style="color: #276ef1;">DoliSaaS vs ERPINNOV : deux solutions, deux ambitions</h2>
+
+  <p>
+    <strong>DoliSaaS</strong> est notre solution Dolibarr prête à l’emploi, hébergée en ligne, pensée pour les indépendants, artisans et petites structures.
+    Elle vous permet de gérer rapidement votre activité avec une configuration simple et une interface standard.
+  </p>
+
+  <p>
+    <strong>ERPINNOV</strong>, en revanche, est une solution construite pour les entreprises qui ont besoin de plus : plus de clarté, plus de spécialisation, plus de modularité et plus d’intégrations. Elle reprend le socle fonctionnel de Dolibarr, mais le dépasse pour proposer une approche par corps de métier.
+  </p>
+
+  <p style="margin-top: 15px;">
+    DoliSaaS est idéal pour démarrer simplement. ERPINNOV est conçu pour vous accompagner dans votre montée en charge.
+  </p>
+
+  <hr style="margin: 40px auto; width: 80px; height: 3px; background: linear-gradient(90deg, #276ef1 0%, #b3d1ff 100%); border: none; border-radius: 2px;" />
+
+  <h3 style="color: #1a376c;">Comparatif DoliSaaS / ERPINNOV</h3>
+
+  <table style="width: 100%; border-collapse: collapse; font-size: 1rem; margin-top: 20px;">
+    <thead>
+      <tr style="background-color: #f0f6ff;">
+        <th style="text-align: left; padding: 12px; border: 1px solid #ccc;">Aspect</th>
+        <th style="text-align: center; padding: 12px; border: 1px solid #ccc; background: #eef3fa;">DoliSaaS</th>
+        <th style="text-align: center; padding: 12px; border: 1px solid #ccc; background: #d8ecff; color: #0d47a1;"><strong>ERPINNOV</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">🎯 Cible</td>
+        <td style="text-align: center; border: 1px solid #ccc;">Indépendants, micro-entrepreneurs</td>
+        <td style="text-align: center; border: 1px solid #ccc;"><strong>PME, ONG, projets multi-activités</strong></td>
+      </tr>
+      <tr style="background-color: #f9fcff;">
+        <td style="padding: 10px; border: 1px solid #ccc;">🚀 Mise en route</td>
+        <td style="text-align: center; border: 1px solid #ccc;">Immédiate, sans personnalisation</td>
+        <td style="text-align: center; border: 1px solid #ccc;"><strong>Accompagnement, paramétrage métier</strong></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">🎨 Interface</td>
+        <td style="text-align: center; border: 1px solid #ccc;">Interface Dolibarr standard</td>
+        <td style="text-align: center; border: 1px solid #ccc;"><strong>UX repensée (Vue.js / Laravel)</strong></td>
+      </tr>
+      <tr style="background-color: #f9fcff;">
+        <td style="padding: 10px; border: 1px solid #ccc;">📦 Fonctionnalités</td>
+        <td style="text-align: center; border: 1px solid #ccc;">Modules de base Dolibarr</td>
+        <td style="text-align: center; border: 1px solid #ccc;"><strong>Fonctionnalités métier ciblées (ex : formation, agriculture…)</strong></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">🔌 Intégrations / API</td>
+        <td style="text-align: center; border: 1px solid #ccc;">Non prévues</td>
+        <td style="text-align: center; border: 1px solid #ccc;"><strong>API, synchronisations externes, webhooks</strong></td>
+      </tr>
+      <tr style="background-color: #f9fcff;">
+        <td style="padding: 10px; border: 1px solid #ccc;">🔄 Évolutivité</td>
+        <td style="text-align: center; border: 1px solid #ccc;">Fixe</td>
+        <td style="text-align: center; border: 1px solid #ccc;"><strong>Scalable selon la croissance et les besoins</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top: 30px; font-style: italic;">
+    DoliSaaS est la porte d’entrée idéale. ERPINNOV est la suite naturelle quand votre gestion devient plus complexe ou spécifique.
+  </p>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<!-- oFFRE SOLO-->
+
+
+
+<section id="pricingSection">
+
+    
+    <div style="
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: #d9e7ff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a376c;
+">
+
+
+
+  <div style="flex: 1 1 40%;">
+    <img src="assets/img/front-pages/Offre solo erpinnov-artisant.webp" alt="Artisan illustrant la gestion d'entreprise" style="width: 100%; height: auto; border-radius: 15px; object-fit: cover;"/>
+  </div>
+
+  <div style="flex: 1 1 60%; padding-right: 15px;">
+ 
+
+  <h2 style="color: #276ef1;">ERPINNOV - SOLO</h2>
+
+  <p>
+    <strong>ERPINNOV - SOLO</strong> est une solution SaaS de gestion conçue pour les entrepreneurs, indépendants et petites structures souhaitant bénéficier d’un environnement professionnel évolutif, simple et moderne.
+  </p>
+
+  <ul>
+    <li>🧭 Interface moderne, fluide et ergonomique (Vue.js / Laravel)</li>
+    <li>📋 Gestion des clients, devis, factures, produits/services</li>
+    <li>📊 Suivi de projet, modules de base (stock, banque, utilisateurs)</li>
+    <li>🔐 Instance dédiée, sécurisée et hébergée en France</li>
+    <li>🧩 Compatible avec une montée en charge vers des modules personnalisés</li>
+    <li>☁️ Essai gratuit 14 jours sans engagement</li>
+  </ul>
+
+  <p style="font-style: italic; margin-top: 20px;">
+    L’offre SOLO est idéale pour démarrer sereinement, tout en gardant la possibilité d’évoluer vers des fonctionnalités plus avancées selon vos besoins.
+  </p>
+<p style="margin-top: 15px; font-weight: bold; color: #ff6600;">
+      🚧 En cours de construction – Restez informé de la sortie en vous inscrivant à notre lettre d'information.
+    </p>
+</div>
+
+</div>
+    
+    
+    
+    
+  </div>
+
+  <p id="toggleOffers">En savoir plus sur nos offres &nbsp;&raquo;</p>
+
+  <div id="offersContent" aria-hidden="true">
+
+    <h3>SOLO : Trois formules adaptées à vos besoins</h3>
+
+    <p class="intro">
+  
+
+<ul style="list-style-type: none; padding-left: 0; color: #444; font-size: 1rem;">
+    <li style="margin-bottom: 15px;">
+      <strong style="color:#276ef1;">Basic</strong> : L’essentiel pour démarrer facilement avec un utilisateur, la gestion des clients, produits, devis, factures et comptabilité simple adaptée à Madagascar. Idéal pour les indépendants et micro-entrepreneurs.
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong style="color:#276ef1;">Standard</strong> : Pour les artisans avec des besoins avancés, cette formule ajoute le suivi des interventions, gestion des garanties, statistiques en temps réel et jusqu’à deux utilisateurs, ainsi qu’un email professionnel intégré.
+    </li>
+    <li>
+      <strong style="color:#276ef1;">Premium</strong> : La gestion complète avec la comptabilité analytique avancée, le calcul automatisé des coûts, le suivi du temps par projet, jusqu’à trois utilisateurs et options de stockage supplémentaires.
+    </li>
+  </ul>
+  <p style="font-size: 1rem; color: #444; margin-top: 20px; text-align: center; font-style: italic;">
+    Profitez d’une solution clé en main, hébergée en toute sécurité, avec un essai gratuit de 14 jours, sans engagement.
+  </p>
+    </p>
+
+    <div class="offer-wrapper">
+
+      <!-- Basic -->
+      <div class="offer-card">
+        <h4>Basic</h4>
+        <div class="price">€5.00 <small>/mois</small></div>
+        <div class="currency-mga">25 500 MGA</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des tiers</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des produits</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des clients et prospects (CRM)</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Création de devis et factures</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des stocks et approvisionnements</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité simple (Plan Comptable Général Madagascar)</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi des projets et chantiers</li>
+        </ul>
+        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+      </div>
+
+      <!-- Standard -->
+      <div class="offer-card">
+        <h4>Standard</h4>
+        <div class="price">€8.00 <small>/mois</small></div>
+        <div class="currency-mga">40 000 MGA</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Basic inclus</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Rapports et statistiques en temps réel</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Email professionnel intégré</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des interventions et planning</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des garanties et SAV (ticketing)</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 2 utilisateurs</li>
+        </ul>
+        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+      </div>
+
+      <!-- Premium -->
+      <div class="offer-card">
+        <h4>Premium</h4>
+        <div class="price">€16.00 <small>/mois</small></div>
+        <div class="currency-mga">80 000 MGA</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Standard inclus</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité analytique avancée</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Calcul automatisé des coûts et marges</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi du temps passé par projet</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 3 utilisateurs</li>
+          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Option : stockage supplémentaire (+Go en option)</li>
+        </ul>
+        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<script>
+  const toggleBtn = document.getElementById('toggleOffers');
+  const offersContent = document.getElementById('offersContent');
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = offersContent.classList.toggle('open');
+    toggleBtn.textContent = isOpen ? 'Réduire nos offres «' : 'En savoir plus sur nos offres »';
+    offersContent.setAttribute('aria-hidden', !isOpen);
+  });
+</script>
        
-        <!-- Section landingFAQ -->
+      
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <!-- Section landingFAQ 
+        
+        
+        
+        
+        
+        
+        -->
         <section id="landingFAQ" class="section-py bg-body landing-faq" style="padding-top: 120px;">
           <div class="container bg-icon-right">
-              <!-- Section Header -->
+              
+              
+              
+              
+              
+              
+              <!-- Section Header-->
               <h2 class="text-center d-flex justify-content-center align-items-center mb-2">
                   <img src="assets/img/front-pages/icons/section-tilte-icon.png" 
                       alt="section title icon" 
