@@ -358,6 +358,16 @@
     margin-bottom: 30px;
   }
 
+  #toggleOffers2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #187bff;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
   /* Offre déroulante */
   #offersContent {
     overflow: hidden;
@@ -376,6 +386,37 @@
   }
 
   #offersContent p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+
+  /* Offre déroulante2 */
+   #offersContent2 {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+  }
+  #offersContent2.open {
+    max-height: 2000px;
+  }
+
+  #offersContent2 h3 {
+    text-align: center;
+    color: #276ef1;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  #offersContent2 p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+
+  #offersContent2 p.intro {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 40px;
@@ -537,19 +578,19 @@
     <img src="assets/img/front-pages/dolibarr-pdf-bien-gerer-son-entreprisec2171d20240202113929-image_cover.jpg" alt="Documentation Dolibarr offerte d'une valeur de 32€ pour tout abonnement" style="width: 100%; height: auto; border-radius: 15px; object-fit: cover;"/>
     Livre offert pour tout abonnement 
     
- </td>
+    </td>
     <td style="vertical-align: top;">
 
  <!-- texte à droite -->
 
       <p>
     Pour simplifier l’accès à Dolibarr, nous avons conçu <strong>DoliSaaS</strong>&nbsp;: une version en ligne, prête à l’emploi, accessible sans aucun besoin de serveur ou de technicien.
-  </p>
+    </p>
 
-  <p>
-    Que vous soyez artisan, commerçant ou entrepreneur, notre solution <strong>DoliSaaS</strong> vous aide à gérer efficacement votre activité au quotidien.
-    De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d’un site web, nous avons une offre simple et opérationnelle.
-  </p>
+    <p>
+      Que vous soyez artisan, commerçant ou entrepreneur, notre solution <strong>DoliSaaS</strong> vous aide à gérer efficacement votre activité au quotidien.
+      De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d’un site web, nous avons une offre simple et opérationnelle.
+    </p>
 
   <ul style="padding-left: 20px; margin-top: 15px;">
     <li>✅ <strong>Clé en main</strong> : pas d’installation, pas de maintenance, pas de prise de tête.</li>
@@ -562,10 +603,7 @@
 
   <p style="margin-top: 25px; font-style: italic;">
     Avec DoliSaaS, vous bénéficiez de toute la puissance de Dolibarr, sans la complexité technique.
-  </p>
-
- 
-  
+  </p> 
 </td>
   </tr>
   
@@ -814,9 +852,9 @@
     
   </div>
 
-  <p id="toggleOffers">En savoir plus sur nos offres &nbsp;&raquo;</p>
+  <p id="toggleOffers2">En savoir plus sur nos offres &nbsp;&raquo;</p>
 
-  <div id="offersContent" aria-hidden="true">
+  <div id="offersContent2" aria-hidden="true">
 
     <h3>SOLO : Trois formules adaptées à vos besoins</h3>
 
@@ -906,6 +944,15 @@
     const isOpen = offersContent.classList.toggle('open');
     toggleBtn.textContent = isOpen ? 'Réduire nos offres «' : 'En savoir plus sur nos offres »';
     offersContent.setAttribute('aria-hidden', !isOpen);
+  });
+
+  const toggleBtn2 = document.getElementById('toggleOffers2');
+  const offersContent2 = document.getElementById('offersContent2');
+
+  toggleBtn2.addEventListener('click', () => {
+    const isOpen = offersContent2.classList.toggle('open');
+    toggleBtn2.textContent = isOpen ? 'Réduire nos offres «' : 'En savoir plus sur nos offres »';
+    offersContent2.setAttribute('aria-hidden', !isOpen);
   });
 </script>
        
