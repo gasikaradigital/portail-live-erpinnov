@@ -391,6 +391,8 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s ease;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   #offersContent2.open {
     max-height: 2000px;
@@ -861,9 +863,9 @@
 
   <div id="offersContent2" aria-hidden="true">
 
-    <h3>SOLO : Trois formules adaptées à vos besoins</h3>
+  <h3>SOLO : Trois formules adaptées à vos besoins</h3>
 
-    <p class="intro">
+  <p class="intro">
   
 
 <ul style="list-style-type: none; padding-left: 0; color: #444; font-size: 1rem;">
@@ -882,62 +884,74 @@
   </p>
     </p>
 
-    <div class="offer-wrapper">
+  <div class="offer-wrapper">
 
-      <!-- Basic -->
-      <div class="offer-card">
-        <h4>Basic</h4>
+    <!-- Basic -->
+    <div class="offer-card pricing-card">
+      <h4 class="plan-name">Basic</h4>
+      <div class="price-container">
         <div class="price">€5.00 <small>/mois</small></div>
-        <div class="currency-mga">25 500 MGA</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des tiers</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des produits</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des clients et prospects (CRM)</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Création de devis et factures</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des stocks et approvisionnements</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité simple (Plan Comptable Général Madagascar)</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi des projets et chantiers</li>
-        </ul>
-        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
-        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+        <div class="currency">25 500 MGA</div>
       </div>
-
-      <!-- Standard -->
-      <div class="offer-card">
-        <h4>Standard</h4>
-        <div class="price">€8.00 <small>/mois</small></div>
-        <div class="currency-mga">40 000 MGA</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Basic inclus</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Rapports et statistiques en temps réel</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Email professionnel intégré</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des interventions et planning</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des garanties et SAV (ticketing)</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 2 utilisateurs</li>
-        </ul>
-        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
-        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+      <ul class="list-unstyled flex-grow-1">
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des tiers</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des produits</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des clients et prospects (CRM)</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Création de devis et factures</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des stocks et approvisionnements</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité simple (Plan Comptable Général Madagascar)</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi des projets et chantiers</li>
+      </ul>
+      <div class="button-wrapper">
+        <a href="https://portail.erpinnov.com/inscription" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">S’inscrire</a>
       </div>
-
-      <!-- Premium -->
-      <div class="offer-card">
-        <h4>Premium</h4>
-        <div class="price">€16.00 <small>/mois</small></div>
-        <div class="currency-mga">80 000 MGA</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Standard inclus</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité analytique avancée</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Calcul automatisé des coûts et marges</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi du temps passé par projet</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 3 utilisateurs</li>
-          <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Option : stockage supplémentaire (+Go en option)</li>
-        </ul>
-        <a href="https://portail.erpinnov.com/inscription" class="btn-inscrire" target="_blank" rel="noopener noreferrer">S’inscrire</a>
-        <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
-      </div>
-
+      <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
     </div>
+
+    <!-- Standard -->
+    <div class="offer-card pricing-card">
+      <h4 class="plan-name">Standard</h4>
+      <div class="price-container">
+        <div class="price">€8.00 <small>/mois</small></div>
+        <div class="currency">40 000 MGA</div>
+      </div>
+      <ul class="list-unstyled flex-grow-1">
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Basic inclus</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Rapports et statistiques en temps réel</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Email professionnel intégré</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des interventions et planning</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Gestion des garanties et SAV (ticketing)</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 2 utilisateurs</li>
+      </ul>
+      <div class="button-wrapper">
+        <a href="https://portail.erpinnov.com/inscription" class="btn btn-primary" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+      </div>
+      <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+    </div>
+
+    <!-- Premium -->
+    <div class="offer-card pricing-card">
+      <h4 class="plan-name">Premium</h4>
+      <div class="price-container">
+        <div class="price">€16.00 <small>/mois</small></div>
+        <div class="currency">80 000 MGA</div>
+      </div>
+      <ul class="list-unstyled flex-grow-1">
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Modules Standard inclus</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Comptabilité analytique avancée</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Calcul automatisé des coûts et marges</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Suivi du temps passé par projet</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 3 utilisateurs</li>
+        <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Option : stockage supplémentaire (+Go en option)</li>
+      </ul>
+      <div class="button-wrapper">
+        <a href="https://portail.erpinnov.com/inscription" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">S’inscrire</a>
+      </div>
+      <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+    </div>
+
   </div>
+</div>
 
 </section>
 
