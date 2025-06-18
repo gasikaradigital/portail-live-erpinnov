@@ -88,3 +88,31 @@ function animateOnScroll() {
         observer.observe(element);
     });
 }
+        // Script pour gérer la validation du formulaire
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            if (email) {
+                alert('Merci pour votre inscription : ' + email);
+            }
+        });
+
+        // Script pour gérer l'état du label même sans :placeholder-shown
+        const emailInput = document.getElementById('email-input');
+        const label = emailInput.nextElementSibling;
+
+        function updateLabel() {
+            if (emailInput.value.length > 0 || emailInput === document.activeElement) {
+                label.style.top = '0';
+                label.style.transform = 'translateY(-50%) scale(0.85)';
+                label.style.color = emailInput === document.activeElement ? '#0d6efd' : '#6c757d';
+            } else {
+                label.style.top = '50%';
+                label.style.transform = 'translateY(-50%)';
+                label.style.color = '#6c757d';
+            }
+        }
+
+        emailInput.addEventListener('focus', updateLabel);
+        emailInput.addEventListener('blur', updateLabel);
+        emailInput.addEventListener('input', updateLabel);
