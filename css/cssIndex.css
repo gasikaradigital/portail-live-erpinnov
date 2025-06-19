@@ -1,0 +1,262 @@
+
+    /* Corrections responsive supplémentaires */
+    @media (max-width: 767.98px) {
+      /* Ajustements navbar */
+      .navbar-brand {
+      padding: 0.5rem 0;
+      }
+            
+      /* Hero section */
+      .hero-content {
+        text-align: center;
+        padding-top: 2rem;
+      }
+              
+      .hero-dashboard {
+        margin-top: 2rem;
+      }
+              
+      /* Section modules */
+      .fun-facts-icon {
+        padding: 1.5rem !important;
+      }
+              
+      /* Footer */
+      .footer-top {
+        padding-top: 4rem !important;
+      }
+              
+      .footer-title {
+        margin-top: 2rem;
+      }
+              
+      /* FAQ section */
+      .faq-image {
+        max-width: 80%;
+        margin-bottom: 2rem;
+      }
+    }
+        
+    @media (max-width: 991.98px) {
+      /* Ajustements pour tablettes */
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+    
+  
+
+  #pricingSection h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+  }
+
+  #pricingSection h2 span {
+    color: #276ef1;
+    font-weight: 900;
+  }
+
+  /* Encadré SOLO */
+  .solo-box {
+    max-width: 700px;
+    margin: 40px auto 50px;
+    padding: 30px 35px;
+    border-radius: 20px;
+    background-color: #e6f0ff;
+    box-shadow: 0 8px 25px rgba(39, 110, 241, 0.15);
+    text-align: center;
+    color: #1848c9;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  .solo-box h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+  .solo-box p {
+    color: #2a2a2a;
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Accordéon toggle */
+  #toggleOffers {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #187bff;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
+  #toggleOffers2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #187bff;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
+  /* Offre déroulante */
+  #offersContent {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+  }
+  #offersContent.open {
+    max-height: 2000px;
+  }
+
+  #offersContent h3 {
+    text-align: center;
+    color: #276ef1;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  #offersContent p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+
+  /* Offre déroulante2 */
+   #offersContent2 {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  #offersContent2.open {
+    max-height: 2000px;
+  }
+
+  #offersContent2 h3 {
+    text-align: center;
+    color: #276ef1;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  #offersContent2 p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+
+  #offersContent2 p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+
+  /* Colonnes offres */
+  .offer-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    max-width: 960px;
+    margin: auto;
+  }
+  @media (max-width: 1000px) {
+    .offer-wrapper {
+      flex-wrap: wrap;
+    }
+  }
+
+  .offer-card {
+    flex: 0 0 300px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .offer-card h4 {
+    color: #276ef1;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .offer-card .price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #276ef1;
+    margin-bottom: 5px;
+  }
+
+  .offer-card .price small {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .offer-card .currency-mga {
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #444;
+  }
+
+  .offer-card ul {
+    list-style: none;
+    padding-left: 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    flex-grow: 1;
+  }
+
+  .offer-card li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .offer-card li svg {
+    margin-right: 10px;
+    flex-shrink: 0;
+    fill: #276ef1;
+    width: 18px;
+    height: 18px;
+  }
+
+  .offer-card a.btn-inscrire {
+    display: block;
+    margin-top: 30px;
+    padding: 14px 0;
+    text-align: center;
+    background-color: #276ef1;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .offer-card a.btn-inscrire:hover {
+    background-color: #1848c9;
+  }
+
+  .offer-card p.try-free {
+    text-align: center;
+    color: #777;
+    margin-top: 12px;
+    font-size: 0.95rem;
+  }
