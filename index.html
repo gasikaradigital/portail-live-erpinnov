@@ -276,40 +276,137 @@
 
     
     <div class="container my-5">
-  <div class="row justify-content-center"><div class="col-lg-10 col-md-10 col-12 p-4" style="background-color: #d9e7ff; border-radius: 20px; box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);">  <h3 class="text-primary fw-bold mb-4" style="color: #276ef1;">DoliSaas - Dolibarr en ligne</h3>
-      <table class="table">
-        <tr>
-          <td class="align-top pe-3">
-            <img src="assets/img/front-pages/dolibarr-pdf-bien-gerer-son-entreprisec2171d20240202113929-image_cover.jpg" 
-                 alt="Documentation Dolibarr offerte d'une valeur de 32€ pour tout abonnement" 
-                 class="img-fluid rounded" style="border-radius: 15px; object-fit: cover;" />
-            Livre offert pour tout abonnement
-          </td>
-          <td class="align-top">
-            <p>
-              Pour simplifier l’accès à Dolibarr, nous avons conçu <strong>DoliSaaS</strong> : une version en ligne, prête à l’emploi, accessible sans aucun besoin de serveur ou de technicien.
-            </p>
-            <p>
-              Que vous soyez artisan, commerçant ou entrepreneur, notre solution <strong>DoliSaaS</strong> vous aide à gérer efficacement votre activité au quotidien.
-              De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d’un site web, nous avons une offre simple et opérationnelle.
-            </p>
-            <ul class="list-unstyled ps-3 my-3">
-              <li>✅ <strong>Clé en main</strong> : pas d’installation, pas de maintenance, pas de prise de tête.</li>
-              <li>☁️ <strong>Hébergement sécurisé</strong> sur des serveurs performants en France.</li>
-              <li>📘 <strong>Documentation complète</strong> et <strong>livre offert</strong> (valeur 32 €) pour tout abonnement.</li>
-              <li>🧾 <strong>Plans comptables inclus</strong> : PCG 2005 (Madagascar) et PCG 2014 (France).</li>
-              <li>🎓 Tutoriels vidéo, forum communautaire, FAQ, et assistance de base intégrée.</li>
-              <li>🎁 <strong>Essai gratuit 14 jours</strong> sans engagement.</li>
-            </ul>
-            <p class="mt-4 fst-italic">
-              Avec DoliSaaS, vous bénéficiez de toute la puissance de Dolibarr, sans la complexité technique.
-            </p>
-          </td>
-        </tr>
-      </table>
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-md-10 col-12 p-4 dolisaas-container" style="
+      background-color: #d9e7ff; 
+      border-radius: 20px; 
+      box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+    ">
+      <h3 class="text-primary fw-bold mb-4" style="
+        color: #276ef1;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        text-align: center;
+        margin-bottom: 30px;
+      ">DoliSaas - Dolibarr en ligne</h3>
+      
+      <div class="dolisaas-content" style="
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+      ">
+        <!-- Colonne gauche : Image et texte -->
+        <div class="dolisaas-image-section" style="
+          flex: 1 1 35%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        ">
+          <img src="assets/img/front-pages/dolibarr-pdf-bien-gerer-son-entreprisec2171d20240202113929-image_cover.jpg" 
+               alt="Documentation Dolibarr offerte d'une valeur de 32€ pour tout abonnement" 
+               class="img-fluid rounded" 
+               style="
+                 border-radius: 15px; 
+                 object-fit: cover;
+                 max-width: 100%;
+                 height: auto;
+                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                 margin-bottom: 15px;
+               " />
+          <p style="
+            font-size: 0.9rem;
+            color: #276ef1;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.4;
+          ">Livre offert pour tout abonnement</p>
+        </div>
+
+        <!-- Colonne droite : Contenu texte -->
+        <div class="dolisaas-text-section" style="
+          flex: 1 1 65%;
+          padding-left: 20px;
+        ">
+          <p style="margin-bottom: 15px; line-height: 1.6;">
+            Pour simplifier l'accès à Dolibarr, nous avons conçu <strong>DoliSaaS</strong> : une version en ligne, prête à l'emploi, accessible sans aucun besoin de serveur ou de technicien.
+          </p>
+          <p style="margin-bottom: 20px; line-height: 1.6;">
+            Que vous soyez artisan, commerçant ou entrepreneur, notre solution <strong>DoliSaaS</strong> vous aide à gérer efficacement votre activité au quotidien.
+            De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d'un site web, nous avons une offre simple et opérationnelle.
+          </p>
+          
+          <ul class="list-unstyled" style="
+            padding-left: 0;
+            margin: 20px 0;
+            line-height: 1.6;
+          ">
+            <li style="margin-bottom: 8px;">✅ <strong>Clé en main</strong> : pas d'installation, pas de maintenance, pas de prise de tête.</li>
+            <li style="margin-bottom: 8px;">☁️ <strong>Hébergement sécurisé</strong> sur des serveurs performants en France.</li>
+            <li style="margin-bottom: 8px;">📘 <strong><a href="documentation-complete.pdf" target="_blank" style="color: #276ef1; text-decoration: none;">Documentation complète</a></strong> et <strong><a href="livre-offert.pdf" target="_blank" style="color: #276ef1; text-decoration: none;">livre offert</a></strong> (valeur 32 €) pour tout abonnement.</li>
+            <li style="margin-bottom: 8px;">🧾 <strong>Plans comptables inclus</strong> : PCG 2005 (Madagascar) et PCG 2014 (France).</li>
+            <li style="margin-bottom: 8px;">🎓 Tutoriels vidéo, forum communautaire, FAQ, et assistance de base intégrée.</li>
+            <li style="margin-bottom: 8px;">🎁 <strong>Essai gratuit 14 jours</strong> sans engagement.</li>
+          </ul>
+          
+          <p class="mt-4 fst-italic" style="
+            margin-top: 20px;
+            line-height: 1.6;
+            color: #555;
+          ">
+            Avec DoliSaaS, vous bénéficiez de toute la puissance de Dolibarr, sans la complexité technique.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Styles responsive pour DoliSaaS -->
+<style>
+@media (max-width: 768px) {
+  .dolisaas-container {
+    padding: 20px 15px;
+  }
+  
+  .dolisaas-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dolisaas-image-section {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+  
+  .dolisaas-text-section {
+    flex: 1 1 100%;
+    padding-left: 0;
+  }
+  
+  .dolisaas-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dolisaas-container {
+    padding: 15px 10px;
+  }
+  
+  .dolisaas-content {
+    gap: 15px;
+  }
+  
+  .dolisaas-container h3 {
+    font-size: 1.3rem;
+  }
+  
+  .dolisaas-image-section img {
+    max-width: 200px;
+  }
+}
+</style>
   <p id="toggleOffers">En savoir plus sur nos offres &nbsp;&raquo;</p>
 
   <div id="offersContent" aria-hidden="true">
@@ -543,50 +640,115 @@
 
 
 <section id="pricingSection">
-   <div class="container my-5" style="
-  max-width: 900px;
-  background-color: #d9e7ff;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  font-family: 'Inter', Arial, sans-serif;
-  color: #1a376c;
-  padding: 25px 30px;
-">
+  <div class="container pricing-container my-5" style="
+    max-width: 900px;
+    background-color: #d9e7ff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #1a376c;
+    padding: 25px 30px;
+  ">
 
-  <div class="flex-shrink-0" style="flex: 1 1 40%;">
-    <img src="assets/img/front-pages/Offre solo erpinnov-artisant.webp" 
-         alt="Artisan illustrant la gestion d'entreprise" 
-         class="img-fluid rounded" style="border-radius: 15px; object-fit: cover;"/>
+    <!-- Colonne gauche : image -->
+    <div class="flex-shrink-0" style="
+      flex: 1 1 30%;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    ">
+      <img src="assets/img/front-pages/Offre solo erpinnov-artisant.webp" 
+           alt="Artisan illustrant la gestion d'entreprise" 
+           class="img-fluid rounded"
+           style="
+             width: 100%;
+             height: auto;
+             max-width: 300px;
+             object-fit: cover;
+             border-radius: 15px;
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+           " />
+    </div>
+
+    <!-- Colonne droite : contenu texte + image "en construction" -->
+    <div style="
+      flex: 1 1 60%; 
+      padding-right: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    ">
+      <h2 style="
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 12px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1.2;
+        margin-bottom: 20px;
+      ">
+        <img src="assets/img/front-pages/logo/logo.png" 
+             alt="section title icon" 
+             style="
+               height: clamp(35px, 6vw, 45px);
+               width: auto;
+               flex-shrink: 0;
+               object-fit: contain;
+             " />
+        <span class="text-primary" style="
+          color: #276ef1;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          min-width: 0;
+        ">ERPINNOV - SOLO</span>
+      </h2>
+
+      <p>
+        <strong>ERPINNOV - SOLO</strong> est une solution SaaS de gestion conçue pour les entrepreneurs, indépendants et petites structures souhaitant bénéficier d'un environnement professionnel évolutif, simple et moderne.
+      </p>
+
+      <ul class="list-unstyled" style="
+        margin-top: 0;
+        padding-left: 0;
+        line-height: 1.6;
+      ">
+        <li style="margin-bottom: 8px;">🧭 Interface moderne, fluide et ergonomique (Vue.js / Laravel)</li>
+        <li style="margin-bottom: 8px;">📋 Gestion des clients, devis, factures, produits/services</li>
+        <li style="margin-bottom: 8px;">📊 Suivi de projet, modules de base (stock, banque, utilisateurs)</li>
+        <li style="margin-bottom: 8px;">🔐 Instance dédiée, sécurisée et hébergée en France</li>
+        <li style="margin-bottom: 8px;">🧩 Compatible avec une montée en charge vers des modules personnalisés</li>
+        <li style="margin-bottom: 8px;">☁️ Essai gratuit 14 jours sans engagement</li>
+      </ul>
+
+      <p class="fst-italic" style="margin-top: 20px;">
+        L'offre SOLO est idéale pour démarrer sereinement, tout en gardant la possibilité d'évoluer vers des fonctionnalités plus avancées selon vos besoins.
+      </p>
+
+      <p style="margin-top: 15px; font-weight: bold; color: #ff6600;">
+        🚧 En cours de construction – Restez informé de la sortie en vous inscrivant à notre lettre d'information.
+      </p>
+
+      <div style="margin-top: 10px; margin-bottom: 20px;">
+        <img src="assets/img/front-pages/image-enconstruction.jpg" 
+             alt="Illustration en construction"
+             style="
+               width: 100%;
+               height: auto;
+               max-height: 200px;
+               border-radius: 15px;
+               object-fit: cover;
+               display: block;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+             "/>
+      </div>
+
+    </div>
   </div>
-
-  <div style="flex: 1 1 60%; padding-right: 15px;">
-    <h2 class="text-primary" style="color: #276ef1;">ERPINNOV - SOLO</h2>
-
-    <p>
-      <strong>ERPINNOV - SOLO</strong> est une solution SaaS de gestion conçue pour les entrepreneurs, indépendants et petites structures souhaitant bénéficier d’un environnement professionnel évolutif, simple et moderne.
-    </p>
-
-    <ul class="list-unstyled">
-      <li>🧭 Interface moderne, fluide et ergonomique (Vue.js / Laravel)</li>
-      <li>📋 Gestion des clients, devis, factures, produits/services</li>
-      <li>📊 Suivi de projet, modules de base (stock, banque, utilisateurs)</li>
-      <li>🔐 Instance dédiée, sécurisée et hébergée en France</li>
-      <li>🧩 Compatible avec une montée en charge vers des modules personnalisés</li>
-      <li>☁️ Essai gratuit 14 jours sans engagement</li>
-    </ul>
-
-    <p class="fst-italic" style="margin-top: 20px;">
-      L’offre SOLO est idéale pour démarrer sereinement, tout en gardant la possibilité d’évoluer vers des fonctionnalités plus avancées selon vos besoins.
-    </p>
-
-    <p style="margin-top: 15px; font-weight: bold; color: #ff6600;">
-      🚧 En cours de construction – Restez informé de la sortie en vous inscrivant à notre lettre d'information.
-    </p>
-  </div>
-</div>
     
     
     
@@ -678,7 +840,10 @@
         <li class="feature-item"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 6.709L9 18l-5.285-5.285 1.414-1.414L9 15.172l9.871-9.871z"/></svg>Jusqu'à 3 utilisateurs</li>
       </ul>
       <div style="text-align: center; margin: 20px 0;">
-  <a href="https://portail.erpinnov.com/inscription" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 40px; border: 2px solid #007bff; color: #007bff; text-decoration: none; border-radius: 4px; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; background-color: transparent;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';">S'inscrire</a>
+  <a href="https://portail.erpinnov.com/inscription" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  style="display: inline-block; padding: 12px 40px; border: 2px solid #007bff; color: #007bff; text-decoration: none; border-radius: 4px; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; background-color: transparent;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';">S'inscrire</a>
 </div>
       <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
     </div>
