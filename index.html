@@ -26,35 +26,44 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="layout-navbar container shadow-none py-0">
-    <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
-      <!-- Logo -->
-      <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4 align-items-center">
-        <span class="app-brand-logo demo">
-          <img src="assets/img/front-pages/logo/logo.png" alt="Logo ERP INNOV" style="width: 40px; height: 40px;" />
-        </span>
-        <span class="innov-text ms-2">ERP <span class="innov-text">INNOV</span></span>
-      </div>
-      
-      <!-- Bouton toggler pour mobile -->
-      <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggleMenu">
-        <i class="ri-menu-fill ri-24px align-middle" id="menuIcon"></i>
-      </button>
-      
-      <!-- Menu principal -->
-      <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto p-3 p-lg-0">
-          <li class="nav-item mx-2"><a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingHero" id="nav-landingHero"><i class="tf-icons ri-home-line"></i><span>Accueil</span></a></li>
-          <li class="nav-item mx-2"><a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingGestion" id="nav-landingGestion"><i class="tf-icons ri-price-tag-line"></i><span>Gestion</span></a></li>
-          <li class="nav-item mx-2"><a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#pricingSection" id="nav-landingPricing"><i class="tf-icons ri-price-tag-line"></i><span>Offres</span></a></li>
-          <li class="nav-item mx-2"><a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingFAQ" id="nav-landingFAQ"><i class="tf-icons ri-questionnaire-line"></i><span>FAQ</span></a></li>
-          <!-- Connexion et Inscription -->
-          <li class="nav-item mx-2" id="loginItem"><a href="https://portail.erpinnov.com" class="auth-link btn-login d-flex align-items-center"><i class="tf-icons ri-user-line me-md-1"></i><span class="d-inline">Connexion</span></a></li>
-          <li class="nav-item mx-2" id="registerItem"><a href="https://portail.erpinnov.com/inscription" class="auth-link btn-inscription d-flex align-items-center"><i class="tf-icons ri-user-add-line me-md-1"></i><span class="d-inline">Inscription</span></a></li>
-        </ul>
-      </div>
+<nav class="layout-navbar">
+  <div class="navbar navbar-expand-lg landing-navbar">
+    <!-- Logo -->
+    <div class="navbar-brand app-brand demo">
+      <span class="app-brand-logo demo">
+        <img src="assets/img/front-pages/logo/logo.png" alt="Logo ERP INNOV" />
+      </span>
+      <span class="ms-2">ERP <span class="innov-text">INNOV</span></span>
     </div>
-  </nav>
+
+    <!-- Bouton toggler pour mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <i class="ri-menu-fill ri-24px" id="menuIcon"></i>
+    </button>
+
+    <!-- Menu principal -->
+    <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#landingHero" id="nav-landingHero"><i
+              class="tf-icons ri-home-line"></i><span>Accueil</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#landingGestion" id="nav-landingGestion"><i
+              class="tf-icons ri-price-tag-line"></i><span>Gestion</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricingSection" id="nav-landingPricing"><i
+              class="tf-icons ri-price-tag-line"></i><span>Offres</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#landingFAQ" id="nav-landingFAQ"><i
+              class="tf-icons ri-questionnaire-line"></i><span>FAQ</span></a></li>
+      </ul>
+
+      <!-- Boutons à droite -->
+      <ul class="navbar-nav">
+        <li class="nav-item" id="loginItem"><a href="https://portail.erpinnov.com" class="auth-link btn-login"><i
+              class="tf-icons ri-user-line"></i><span>Connexion</span></a></li>
+        <li class="nav-item" id="registerItem"><a href="https://portail.erpinnov.com/inscription"
+            class="auth-link btn-inscription"><i class="tf-icons ri-user-add-line"></i><span>Inscription</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
   <!-- Contenu principal -->
   <main>
