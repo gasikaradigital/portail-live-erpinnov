@@ -59,16 +59,16 @@
   <!-- Contenu principal -->
   <main>
     <!-- Section Hero -->
-    <section id="landingHero" class="d-flex align-items-center mb-5" style="padding-top: 70px; width: 100%;">
+   <section id="landingHero" class="d-flex align-items-center border " style="padding-top: 70px; width: 100%;">
       <div class="hero-bg">
         <div class="gradient-blob blob-1"></div>
         <div class="gradient-blob blob-2"></div>
         <div class="gradient-blob blob-3"></div>
       </div>
-      <div class="container position-relative">
-        <div class="row align-items-center min-vh-100">
+      <div class="container">
+        <div class="row align-items-center ">
           <!-- Text Content -->
-          <div class="col-lg-6 hero-content" data-aos="fade-up">
+          <div class="col-12 col-md-6 hero-content mx-auto" data-aos="fade-up">
             <h3 class="hero-title" data-aos="fade-up" data-aos-delay="300">
               <span class="gradient-text">Nos solutions</span> adaptées pour votre
               <span class="highlight-text"> organisation</span>
@@ -80,15 +80,15 @@
               • <b>Optimisation de la gestion</b> : Optimisez vos dépenses et améliorez votre rentabilité.<br />
               • <b>Croissance accélérée</b> : Adoptez des outils performants pour soutenir votre développement.
             </p>
-            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
-              <a href="/login" class="btn-primary">
+            <div class="hero-buttons mb-3" data-aos="fade-up" data-aos-delay="500">
+              <a href="/login" class="btn-primary ">
                 <span>En savoir plus, inscription gratuite</span>
                 <i class="ri-arrow-right-line ms-2"></i>
               </a>
             </div>
           </div>
           <!-- Dashboard Preview -->
-          <div class="col-lg-6 hero-dashboard" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-lg-6  hero-dashboard" data-aos="fade-left" data-aos-delay="300">
             <div class="dashboard-wrapper">
               <img src="assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="Dashboard Preview" class="dashboard-image" />
               <div class="stats-card stats-card-1">
@@ -104,9 +104,8 @@
         </div>
       </div>
     </section>
-
     <!-- Section Modules / Gestion -->
-    <section id="landingGestion" class="section-py" style="padding-top: 125px;">
+    <section id="landingGestion" class="section-py" style="padding-top: 125px; ">
       <div class="container">
         <div class="row gx-0 gy-6 gx-sm-6">
           <div class="container bg-icon-left position-relative">
@@ -155,124 +154,97 @@
     </section>
 
     <!-- Section Pricing -->
-    <section id="pricingSection">
-      <h2><span>//</span> NOS OFFRES</h2>
-      <div class="container my-5" style="max-width: auto; font-family: 'Inter', sans-serif; color: #1a376c; line-height: 1.7;">
-        <h2 class="text-primary" style="color: #276ef1;">Qu’est-ce que Dolibarr&nbsp;?</h2>
+    <section id="pricingSection" class="pricing-section">
+    <h2><span>//</span> NOS OFFRES</h2>
+    <div class="container my-5">
+        <h2 class="text-primary">Qu’est-ce que Dolibarr&nbsp;?</h2>
         <img src="assets/img/front-pages/dolibarr_logo.svg" alt="Logo Dolibarr ERP CRM" class="img-fluid mb-3" />
         <p><strong>Dolibarr ERP/CRM</strong> est une solution open source reconnue dans le monde entier pour la gestion d’entreprise. Elle regroupe dans un seul outil : la gestion des clients, des devis, des factures, des stocks, de la comptabilité, des projets, des ressources humaines, et bien plus encore.</p>
         <p>C’est un outil puissant, modulable et gratuit, utilisé par des milliers de TPE, PME, indépendants et associations. Cependant, sa richesse fonctionnelle peut parfois dérouter les utilisateurs non techniques ou ceux qui souhaitent une solution immédiatement opérationnelle, sans configuration complexe.</p>
-        <hr style="margin: 40px auto; width: 80px; height: 3px; background: linear-gradient(90deg, #276ef1 0%, #b3d1ff 100%); border: none; border-radius: 2px;" />
-        <h2 class="text-primary" style="color: #276ef1;">Pourquoi DoliSaaS&nbsp;?</h2>
-      </div>
+        <hr />
+        <h2 class="text-primary">Pourquoi DoliSaaS&nbsp;?</h2>
+    </div>
 
-      <div class="container my-5">
+    <div class="container my-5 dolisaas-container">
         <div class="row justify-content-center">
-          <div class="col-lg-12 col-md-12 col-12 p-4 dolisaas-container" style="background-color: #d9e7ff; border-radius: 20px; box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);">
-            <h3 class="text-primary fw-bold mb-4" style="color: #276ef1; font-size: clamp(1.5rem, 3vw, 2rem); text-align: center; margin-bottom: 30px;">DoliSaaS - Dolibarr en ligne</h3>
-            <div class="dolisaas-content" style="display: flex; gap: 30px; align-items: flex-start;">
-              <!-- Colonne gauche : Image et texte -->
-              <div class="dolisaas-image-section" style="flex: 1 1 35%; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <img src="assets/img/front-pages/dolibarr-pdf-bien-gerer-son-entreprisec2171d20240202113929-image_cover.jpg" alt="Documentation Dolibarr offerte d'une valeur de 32€ pour tout abonnement" class="img-fluid rounded" style="border-radius: 15px; object-fit: cover; max-width: 100%; height: auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 15px;" />
-              </div>
+            <div class="col-lg-12 col-md-12 col-12 p-4">
+                <h3 class="text-primary fw-bold mb-4">DoliSaaS - Dolibarr en ligne</h3>
+                <div class="dolisaas-content">
+                    <div class="dolisaas-image-section">
+                        <img src="assets/img/front-pages/dolibarr-pdf-bien-gerer-son-entreprisec2171d20240202113929-image_cover.jpg" alt="Documentation Dolibarr" class="img-fluid rounded" />
+                    </div>
 
-              <!-- Colonne droite : Contenu texte -->
-              <div class="dolisaas-text-section" style="flex: 1 1 65%; padding-left: 20px;">
-                <p style="margin-bottom: 15px; line-height: 1.6;">Pour simplifier l'accès à Dolibarr, nous avons conçu <strong>DoliSaaS</strong> : une version en ligne, prête à l'emploi, accessible sans aucun besoin de serveur ou de technicien.</p>
-                <p style="margin-bottom: 20px; line-height: 1.6;">Que vous soyez artisan, commerçant ou entrepreneur, notre solution <strong>DoliSaaS</strong> vous aide à gérer efficacement votre activité au quotidien. De la gestion des clients à la comptabilité, en passant par le suivi des ventes et la gestion d'un site web, nous avons une offre simple et opérationnelle.</p>
-                <ul class="list-unstyled" style="padding-left: 0; margin: 20px 0; line-height: 1.6;">
-                  <li style="margin-bottom: 8px;">✅ <strong>Clé en main</strong> : pas d'installation, pas de maintenance, pas de prise de tête.</li>
-                  <li style="margin-bottom: 8px;">☁️ <strong>Hébergement sécurisé</strong> sur des serveurs performants en France.</li>
-                  <li style="margin-bottom: 8px;">📘 <strong><a href="documentation-complete.pdf" target="_blank" style="color: #276ef1; text-decoration: none;">Documentation complète</a></strong> et <strong><a href="livre-offert.pdf" target="_blank" style="color: #276ef1; text-decoration: none;">livre offert</a></strong> (valeur 32 €) pour tout abonnement.</li>
-                  <li style="margin-bottom: 8px;">🧾 <strong>Plans comptables inclus</strong> : PCG 2005 (Madagascar) et PCG 2014 (France).</li>
-                  <li style="margin-bottom: 8px;">🎓 Tutoriels vidéo, forum communautaire, FAQ, et assistance de base intégrée.</li>
-                  <li style="margin-bottom: 8px;">🎁 <strong>Essai gratuit 14 jours</strong> sans engagement.</li>
-                </ul>
-                <p class="mt-4 fst-italic" style="margin-top: 20px; line-height: 1.6; color: #555;">Avec DoliSaaS, vous bénéficiez de toute la puissance de Dolibarr, sans la complexité technique.</p>
-              </div>
+                    <div class="dolisaas-text-section">
+                        <p>Pour simplifier l'accès à Dolibarr, nous avons conçu <strong>DoliSaaS</strong> : une version en ligne, prête à l'emploi, accessible sans aucun besoin de serveur ou de technicien.</p>
+                        <p>Que vous soyez artisan, commerçant ou entrepreneur, notre solution <strong>DoliSaaS</strong> vous aide à gérer efficacement votre activité au quotidien.</p>
+                        <ul class="list-unstyled custom-list">
+                            <li>✅ <strong>Clé en main</strong> : pas d'installation, pas de maintenance, pas de prise de tête.</li>
+                            <li>☁️ <strong>Hébergement sécurisé</strong> sur des serveurs performants en France.</li>
+                            <li>📘 <strong><a href="documentation-complete.pdf" target="_blank">Documentation complète</a></strong> et <strong><a href="livre-offert.pdf" target="_blank">livre offert</a></strong> (valeur 32 €) pour tout abonnement.</li>
+                            <li>🧾 <strong>Plans comptables inclus</strong>.</li>
+                            <li>🎓 Tutoriels vidéo, forum communautaire, FAQ, et assistance de base intégrée.</li>
+                            <li>🎁 <strong>Essai gratuit 14 jours</strong> sans engagement.</li>
+                        </ul>
+                        <p class="mt-4 fst-italic">Avec DoliSaaS, vous bénéficiez de toute la puissance de Dolibarr, sans la complexité technique.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 
-      <!-- Styles responsive pour DoliSaaS -->
-      <style>
-        @media (max-width: 768px) {
-          .dolisaas-container { padding: 20px 15px; }
-          .dolisaas-content { flex-direction: column; gap: 20px; }
-          .dolisaas-image-section { flex: 1 1 100%; margin-bottom: 20px; }
-          .dolisaas-text-section { flex: 1 1 100%; padding-left: 0; }
-          .dolisaas-container h3 { font-size: 1.5rem; margin-bottom: 20px; }
-        }
-        @media (max-width: 480px) {
-          .dolisaas-container { padding: 15px 10px; }
-          .dolisaas-content { gap: 15px; }
-          .dolisaas-container h3 { font-size: 1.3rem; }
-          .dolisaas-image-section img { max-width: 200px; }
-        }
-      </style>
-
-      <p id="toggleOffers">En savoir plus sur nos offres &nbsp;&raquo;</p>
-      <div id="offersContent" aria-hidden="true" style="max-width: 1200px; margin: 0 auto;">
-        <div style="max-width: auto; padding: 0 10px; padding-bottom: 100px;">
-          <h3>Trois formules adaptées à vos besoins</h3>
-          <ul style="list-style-type: none; color: #444; font-size: 1rem;">
-            <li style="margin-bottom: 15px;">
-              Dolibarr est un excellent outil pour gérer la facturation, le suivi des clients, les stocks et la comptabilité de base. Cependant, certaines fonctionnalités avancées ou adaptations spécifiques au contexte malgache ou à la réglementation peuvent manquer ou nécessiter des paramétrages supplémentaires.
-            </li>
-            <li style="margin-bottom: 15px;">
-              Pour garantir la conformité fiscale, il est recommandé de faire valider régulièrement votre comptabilité par un professionnel. Un comptable saura vous accompagner pour la clôture annuelle, les déclarations fiscales et l'adaptation du plan comptable à votre activité.
-            </li>
-            <li>
-              <strong style="color:#000000;">À noter :</strong> nous proposons également des formations Dolibarr, pour vous permettre de tirer le meilleur parti du logiciel et gagner en autonomie au quotidien.
-            </li>
-          </ul>
-          <p style="font-size: 1rem; color: #444; margin-top: 10px; font-weight: bold;">Essai gratuit 14 jours sur chaque offre</p>
-          <p style="font-size: 1rem; color: #444; margin-top: 5px;"><strong>Paiement</strong> annuel, possibilité de prélèvement mensuel</p>
-          <p style="font-size: 1rem; color: #444; margin-top: 20px; text-align: center; font-style: italic;">Profitez d'une solution clé en main, hébergée en toute sécurité, avec un essai gratuit de 14 jours, sans engagement.</p>
-          <div class="offer-wrapper">
-            <!-- Basic -->
-            <div class="offer-card pricing-card">
-              <h4 class="plan-name">2 Go</h4>
-              <div class="price-container" style="text-align: center;">
-                <div class="price">€5.00 <small>/mois</small></div>
-                <div class="currency">25 500 MGA</div>
-              </div>
-              <div style="text-align: center; margin: 20px 0;">
-                <a href="https://portail.erpinnov.com/inscription" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 40px; border: 2px solid #007bff; color: #007bff; text-decoration: none; border-radius: 4px; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; background-color: transparent;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';">S'inscrire</a>
-              </div>
-              <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+    <p id="toggleOffers">En savoir plus sur nos offres &nbsp;&raquo;</p>
+    <div id="offersContent" aria-hidden="true">
+        <div style="max-width: 1200px; margin: 0 auto;">
+          <div class="container">
+            <h3>Trois formules adaptées à vos besoins</h3>
+                <p>Dolibarr est un excellent outil pour gérer la facturation, le suivi des clients, les stocks et la comptabilité de base.
+                Pour garantir la conformité fiscale, il est recommandé de faire valider régulièrement votre comptabilité par un professionnel.</p>
+                <p><strong style="color:#000000;">À noter :</strong> nous proposons également des formations Dolibarr.</p>
+            
+            <p class="font-weight-bold">Essai gratuit 14 jours sur chaque offre</p>
+            <p class="font-weight-bold"><strong>Paiement</strong> annuel, possibilité de prélèvement mensuel</p>
+            <p class="text-center font-italic">Profitez d'une solution clé en main, hébergée en toute sécurité.</p>
             </div>
+            <div class="offer-wrapper mb-3">
+                <div class="offer-card pricing-card">
+                    <h4 class="plan-name">2 Go</h4>
+                    <div class="price-container">
+                        <div class="price">€5.00 <small>/mois</small></div>
+                        <div class="currency">25 500 MGA</div>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://portail.erpinnov.com/inscription" target="_blank" class="btn btn-outline-primary">S'inscrire</a>
+                    </div>
+                    <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+                </div>
 
-            <!-- Standard -->
-            <div class="offer-card pricing-card">
-              <h4 class="plan-name">5 Go</h4>
-              <div class="price-container"style="text-align: center;">
-                <div class="price">€8.00 <small>/mois</small></div>
-                <div class="currency">40 000 MGA</div>
-              </div>
-              <div style="text-align: center; margin: 20px 0;">
-                <a href="https://portail.erpinnov.com/inscription" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 40px; border: 2px solid #007bff; color: white; text-decoration: none; border-radius: 8px; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; background-color: #007bff;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.borderColor='#0056b3';" onmouseout="this.style.backgroundColor='#007bff'; this.style.borderColor='#007bff';">S'inscrire</a>
-              </div>
-              <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
-            </div>
+                <div class="offer-card pricing-card">
+                    <h4 class="plan-name">5 Go</h4>
+                    <div class="price-container">
+                        <div class="price">€8.00 <small>/mois</small></div>
+                        <div class="currency">40 000 MGA</div>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://portail.erpinnov.com/inscription" target="_blank" class="btn btn-primary">S'inscrire</a>
+                    </div>
+                    <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+                </div>
 
-            <!-- Premium -->
-            <div class="offer-card pricing-card">
-              <h4 class="plan-name">10 Go</h4>
-              <div class="price-container" style="text-align: center;">
-                <div class="price">€16.00 <small>/mois</small></div>
-                <div class="currency">80 000 MGA</div>
-              </div>
-              <div style="text-align: center; margin: 20px 0;">
-                <a href="https://portail.erpinnov.com/inscription" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 40px; border: 2px solid #007bff; color: #007bff; text-decoration: none; border-radius: 4px; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; background-color: transparent;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';">S'inscrire</a>
-              </div>
-              <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+                <div class="offer-card pricing-card">
+                    <h4 class="plan-name">10 Go</h4>
+                    <div class="price-container">
+                        <div class="price">€16.00 <small>/mois</small></div>
+                        <div class="currency">80 000 MGA</div>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://portail.erpinnov.com/inscription" target="_blank" class="btn btn-outline-primary">S'inscrire</a>
+                    </div>
+                    <p class="try-free">Profitez de l’essai gratuit 14 jours</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
     <!-- Seperateur -->
     <hr style="border: none; height: 3px; width: 80px; background: linear-gradient(90deg, #276ef1 0%, #b3d1ff 100%); border-radius: 2px; margin: 40px auto;" />

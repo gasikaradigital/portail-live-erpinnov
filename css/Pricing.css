@@ -14,7 +14,7 @@
   margin-top: 3rem;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.3s; /* Délai d'animation pour les cartes */
+  animation-delay: 0.3s;
 }
 
 /* Animation au survol améliorée */
@@ -108,6 +108,7 @@
   top: -20px;
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .price {
@@ -115,10 +116,12 @@
   font-weight: bold;
   color: #0d6efd;
   transition: color 0.3s ease;
+  text-align: center;
 }
 
 .pricing-card:hover .price {
   color: #0a58ca;
+  text-align: center;
 }
 
 .period {
@@ -130,6 +133,7 @@
 .feature-list {
   flex-grow: 1;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 .feature-item {
@@ -139,6 +143,7 @@
   line-height: 1.4;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out forwards;
+  text-align: left;
 }
 
 .feature-item:nth-child(even) {
@@ -153,6 +158,7 @@
   width: 20px;
   height: auto;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .feature-item:hover {
@@ -167,17 +173,20 @@
   color: #0d6efd;
   margin-right: 10px;
   font-size: 0.9em;
+  flex-shrink: 0;
 }
 
 /* Style de la liste de fonctionnalités */
 .card-body ul {
   padding-left: 0;
   margin-top: 1.5rem;
+  text-align: left;
 }
 
 .card-body li {
   padding: 0.5rem 0;
   transition: transform 0.2s ease;
+  text-align: left;
 }
 
 .card-body li:hover {
@@ -246,7 +255,9 @@
 /* Section styling */
 .pricing-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding-top: 125px;
 }
+
 
 .section-icon {
   font-size: 1.5rem;
@@ -304,45 +315,247 @@
   50% { box-shadow: 0 0 30px rgba(13, 110, 253, 0.4); }
   100% { box-shadow: 0 0 0 rgba(13, 110, 253, 0); }
 }
-/* Écrans entre 768px et 992px (tablettes) */
-@media (max-width: 992px) {
-  .pricing-section {
-    padding-top: 80px !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: center;
-  }
 
-  .pricing-card {
+/* Styles spécifiques pour la section DoliSaaS */
+.dolisaas-container {
+    background-color: #d9e7ff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+    padding: 2rem;
+}
+
+/* Styles pour le contenu de DoliSaaS */
+.dolisaas-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.dolisaas-image-section {
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dolisaas-text-section {
+    flex: 1 1 65%;
+    padding-left: 20px;
+}
+
+/* Liste personnalisée */
+.custom-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.custom-list li {
+    text-align: left;
+}
+
+/* Styles pour les offres */
+.offer-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-top: 3rem;
-  }
 }
 
-/* Mobiles (moins de 768px) */
-@media (max-width: 767px) {
-  .pricing-section {
-    padding-top: 60px !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: center;
-  }
-
-  .pricing-card {
-    margin-top: 2rem;
-  }
-
-  .pricing-card .card-title {
-    font-size: 1.25rem;
-  }
-
-  .pricing-card .card-text {
-    font-size: 0.95rem;
-  }
-
-  .pricing-card .btn {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-  }
+.offer-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 25px 40px rgba(13, 110, 253, 0.15);
 }
 
+/* Aligner le texte des paragraphes et des listes à gauche */
+.dolisaas-text-section p {
+    text-align: left;
+    text-justify: inter-word;
+}
+
+/* Très petits écrans (moins de 576px) */
+@media (max-width: 575px) {
+    .pricing-section {
+        padding: 40px 0.5rem !important;
+    }
+    
+    .pricing-card {
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .card {
+        padding: 1.5em;
+    }
+    
+    .card-body {
+        padding: 0.5rem;
+    }
+    
+    .plan-name {
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+        margin-top: -40px;
+    }
+    
+    .price {
+        font-size: 2rem;
+    }
+    
+    .currency {
+        font-size: 1rem;
+        top: -15px;
+    }
+    
+    .feature-list {
+        text-align: left;
+    }
+    
+    .feature-item {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .card-body ul {
+        text-align: left;
+    }
+    
+    .card-body li {
+        text-align: left;
+    }
+    
+    .dolisaas-container {
+        padding: 1rem;
+    }
+    
+    .dolisaas-text-section {
+        padding-left: 0;
+    }
+    
+    .dolisaas-text-section p,
+    .custom-list li {
+        text-align: left;
+    }
+}
+
+/* Mobiles (576px à 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .pricing-section {
+        padding: 60px 1rem !important;
+    }
+
+    .pricing-card {
+        margin-top: 2rem;
+    }
+    
+    .plan-name {
+        font-size: 1.4rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .currency {
+        font-size: 1.2rem;
+    }
+    
+    .feature-list {
+        text-align: left;
+    }
+    
+    .feature-item {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .card-body ul {
+        text-align: left;
+    }
+    
+    .card-body li {
+        text-align: left;
+    }
+
+    .card-body .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 1rem auto 0;
+    }
+    
+    .dolisaas-text-section p,
+    .custom-list li {
+        text-align: left;
+    }
+}
+
+/* Tablettes (768px à 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .pricing-section {
+        padding: 80px 1rem !important;
+    }
+
+    .pricing-card {
+        margin-top: 3rem;
+    }
+    
+    .feature-list {
+        text-align: left;
+    }
+    
+    .feature-item {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .card-body ul {
+        text-align: left;
+    }
+    
+    .card-body li {
+        text-align: left;
+    }
+    
+    .dolisaas-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dolisaas-image-section,
+    .dolisaas-text-section {
+        flex: 1 1 100%;
+        padding-left: 0;
+    }
+    
+    .dolisaas-text-section p,
+    .custom-list li {
+        text-align: left;
+    }
+}
+
+/* Écrans moyens et plus grands (992px et plus) */
+@media (min-width: 992px) {
+    .feature-list {
+        text-align: left;
+    }
+    
+    .feature-item {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .card-body ul {
+        text-align: left;
+    }
+    
+    .card-body li {
+        text-align: left;
+    }
+    
+    .dolisaas-text-section p,
+    .custom-list li {
+        text-align: left;
+    }
+}
