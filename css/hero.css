@@ -604,6 +604,7 @@ html, body {
     
     .btn-primary:active, 
     .btn-secondary:active {
+        
         transform: scale(0.98);
     }
 }

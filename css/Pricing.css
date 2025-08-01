@@ -559,3 +559,446 @@
         text-align: left;
     }
 }
+/* Deroulante offer */
+ /* Offre déroulante */
+  #offersContent {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+  }
+  #offersContent.open {
+    max-height: 2000px;
+  }
+
+  #offersContent h3 {
+    text-align: center;
+    color: #276ef1;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  #offersContent p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+ /* Offre déroulante2 */
+   #offersContent2 {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+  }
+  #offersContent2.open { 
+    max-height: 4000px;
+  }
+
+  #offersContent2 h3 {
+    text-align: center;
+    color: #276ef1;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  #offersContent2 p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+
+  #offersContent2 p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #333;
+  }
+   /* Accordéon toggle */
+  #toggleOffers,#toggleOffers2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #187bff;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+/* sur le  table dollibar  */
+/* CSS pour tableau responsive avec scroll horizontal */
+.scrolle-table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scrolle-table table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  font-size: 1rem !important;
+  min-width: 600px; /* Largeur minimale pour éviter la compression */
+}
+
+.scrolle-table thead tr {
+  background-color: #f8f9fa !important;
+}
+
+.scrolle-table th {
+  border: 1px solid #dee2e6 !important;
+  padding: 12px !important;
+  text-align: left !important;
+  font-weight: 600;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.scrolle-table th:nth-child(2) {
+  background: #eef3fa !important;
+  text-align: center !important;
+}
+
+.scrolle-table th:nth-child(3) {
+  background: #d8ecff !important;
+  color: #0d47a1 !important;
+  text-align: center !important;
+}
+
+.scrolle-table td {
+  border: 1px solid #dee2e6 !important;
+  padding: 12px !important;
+  vertical-align: top;
+}
+
+.scrolle-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
+}
+
+.scrolle-table tbody tr:hover {
+  background-color: #e3f2fd;
+  transition: background-color 0.2s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .scrolle-table {
+    margin: 10px 0;
+    border-radius: 4px;
+  }
+  
+  .scrolle-table table {
+    font-size: 0.9rem !important;
+    min-width: 500px;
+  }
+  
+  .scrolle-table th,
+  .scrolle-table td {
+    padding: 8px !important;
+    font-size: 0.85rem;
+  }
+  
+  /* Indicateur de scroll */
+  .scrolle-table::after {
+    content: "← Faites défiler horizontalement →";
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #6c757d;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .scrolle-table table {
+    font-size: 0.8rem !important;
+    min-width: 450px;
+  }
+  
+  .scrolle-table th,
+  .scrolle-table td {
+    padding: 6px !important;
+    font-size: 0.75rem;
+  }
+}
+
+/* Amélioration de l'expérience de scroll sur mobile */
+.scrolle-table {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #dee2e6 #f8f9fa;
+}
+
+.scrolle-table::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrolle-table::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.scrolle-table::-webkit-scrollbar-thumb {
+  background: #dee2e6;
+  border-radius: 3px;
+}
+
+.scrolle-table::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+}
+/* Style pour le paragraphe DoliSaaS responsive */
+.p-dollisaas {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px 0;
+  padding: 15px;
+  text-align: justify;
+  text-align-last: left;
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d47a1;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive pour le paragraphe */
+@media screen and (max-width: 768px) {
+  .p-dollisaas {
+    font-size: 1rem;
+    padding: 12px;
+    margin: 15px 0;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .p-dollisaas {
+    font-size: 0.9rem;
+    padding: 10px;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+}
+/* Style pour la section pricing responsive */
+.pricing-container {
+  max-width: auto;
+  background-color: #d9e7ff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a376c;
+  padding: 25px 30px;
+}
+
+.pricing-container .flex-shrink-0 {
+  flex: 1 1 30%;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pricing-container .img-fluid {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-container .content-right {
+  flex: 1 1 60%;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.pricing-container h2 {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 12px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.pricing-container h2 img {
+  height: clamp(35px, 6vw, 45px);
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.pricing-container h2 .text-primary {
+  color: #276ef1;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.pricing-container .construction-img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.pricing-container .list-unstyled {
+  margin-top: 0;
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+.pricing-container .list-unstyled li {
+  margin-bottom: 8px;
+}
+
+.pricing-container .fst-italic {
+  margin-top: 20px;
+}
+
+.pricing-container .construction-notice {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/* Responsive pour mobile */
+@media screen and (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .pricing-container h2 .text-primary {
+  color: #276ef1;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: medium;
+  min-width: 0;
+}
+  
+  .pricing-container .flex-shrink-0 {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+    order: 1;
+  }
+  /* image construction */
+  .pricing-container .image1 {
+  width: 100% !important;
+  height: auto;
+  border: red solid 1px;
+}
+  .pricing-container .content-right {
+    flex: 1 1 100%;
+    padding-right: 0;
+    order: 2;
+  }
+  
+  .pricing-container .img-fluid {
+    max-width: 250px;
+  }
+  
+  .pricing-container .construction-img {
+    max-height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pricing-container {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .pricing-container .img-fluid {
+    max-width: 200px;
+  }
+  
+  .pricing-container .construction-img {
+    max-height: 120px;
+  }
+}
+/* Style pour la section offer-solo responsive */
+.offer-solo {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.offer-solo .solo-offre {
+  margin: 0;
+  padding: 0;
+}
+
+.offer-solo ul {
+  list-style-type: none;
+  color: #444;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.offer-solo li {
+  margin-bottom: 15px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.offer-solo strong {
+  color: #276ef1;
+}
+
+.offer-solo .footer-text {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsive pour offer-solo */
+@media screen and (max-width: 768px) {
+  .offer-solo ul {
+    font-size: 0.9rem;
+  }
+  
+  .offer-solo li {
+    margin-bottom: 12px;
+  }
+  
+  .offer-solo .footer-text {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .offer-solo ul {
+    font-size: 0.85rem;
+  }
+  
+  .offer-solo li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .offer-solo .footer-text {
+    font-size: 0.85rem;
+    margin-top: 12px;
+  }
+}
