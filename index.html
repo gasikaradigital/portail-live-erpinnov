@@ -525,13 +525,13 @@
             </a>
             <p class="footer-text footer-logo-description mb-4">ERP Innov : la gestion intelligente à portée de main.<br>Simplifiez, innovez, prospérez.</p>
             <ul class="list-unstyled mb-4">
-              <li><a href="mailto:contact@erpinnov.com" class="footer-link">contact@erpinnov.com</a></li>
+              <li> <i class="ri-mail-line me-2"></i><a href="mailto:contact@erpinnov.com" class="footer-link">contact@erpinnov.com</a></li>
             </ul>
             <form id="newsletter-form" class="d-flex gap-2 flex-wrap ">
-              <div class="position-relative flex-grow-1">
+              <!-- <div class="position-relative flex-grow-1"> -->
                 <!-- <input type="email" id="email-input" class="form-control bg-transparent input-responsive rounded-3 w-100" style="padding-top: 1.5rem; color:#dee2e6; padding-bottom: 0.5rem; border: 2px solid #dee2e6; transition: all 0.3s ease;" required /> -->
                 <!-- <label for="email-input" class="position-absolute plachedor text-muted" style="left: 12px; top: 50%; transform: translateY(-50%); transition: all 0.3s ease; pointer-events: none; padding: 0 4px; font-size: 1rem;">Votre email</label> -->
-              </div>
+              <!-- </div> -->
               <button type="submit" class="btn btn-primary flex-shrink-0 bouton-responsive">Rester informé</button>
             </form>
           </div>
@@ -599,7 +599,7 @@ const offersContent = document.getElementById('offersContent');
 
 toggleBtn.addEventListener('click', () => {
 const isOpen = offersContent.classList.toggle('open');
-toggleBtn.textContent = isOpen ? 'Réduire nos offres «' : 'En savoir plus sur nos offres »';
+toggleBtn.textContent = isOpen ? 'voir moins «' : 'En savoir plus sur nos offres »';
 offersContent.setAttribute('aria-hidden', !isOpen);
 });
 
@@ -608,7 +608,7 @@ const offersContent2 = document.getElementById('offersContent2');
 
 toggleBtn2.addEventListener('click', () => {
 const isOpen = offersContent2.classList.toggle('open');
-toggleBtn2.textContent = isOpen ? 'Réduire nos offres «' : 'En savoir plus sur nos offres »';
+toggleBtn2.textContent = isOpen ? 'Voir moins «' : 'En savoir plus sur nos offres »';
 offersContent2.setAttribute('aria-hidden', !isOpen);
 });
 </script>
