@@ -321,27 +321,27 @@
     background-color: #d9e7ff;
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(39, 110, 241, 0.15);
-    padding: 2rem;
+    padding: 2rem; 
+    align-items: center;
 }
 
 /* Styles pour le contenu de DoliSaaS */
-.dolisaas-content {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
+
 
 .dolisaas-image-section {
-    flex: 1 1 35%;
-    display: flex;
-    flex-direction: column;
+     flex: 1 1 35%; 
+    display: flex; 
+    flex-direction: column; 
     align-items: center;
     text-align: center;
+   
+   
 }
 
 .dolisaas-text-section {
-    flex: 1 1 65%;
+    flex: 1 1 65%; 
     padding-left: 20px;
+    text-align: justify;
 }
 
 /* Liste personnalisée */
@@ -371,8 +371,110 @@
 
 /* Aligner le texte des paragraphes et des listes à gauche */
 .dolisaas-text-section p {
-    text-align: left;
+    text-align: justify;
     text-justify: inter-word;
+}
+/* Styles pour le contenu de DoliSaaS */
+.dolisaas-content {
+    display: flex; 
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.dolisaas-image-section {
+    flex: 1 1 35%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+.dolisaas-text-section {
+    flex: 1 1 65%; 
+    text-align: justify;
+
+}
+
+/* Media queries pour la responsivité */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+
+  .dolisaas-container{
+    max-width: 100%;
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+    border: solid blue 1px;
+  }
+    .dolisaas-content {
+        margin-left: 0%;
+        margin-right: 0%;
+        align-items: center;
+    }
+    
+    .dolisaas-image-section {
+        flex: 1 1 40%;
+    }
+    
+    .dolisaas-text-section {
+        flex: 1 1 60%;
+        text-align: justify;
+    }
+}
+
+/* Petites tablettes et grands mobiles (640px et moins) */
+@media screen and (max-width: 640px) {
+    .dolisaas-content {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .dolisaas-image-section {
+        flex: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .dolisaas-text-section {
+        flex: none;
+        width: 100%;
+        padding-left: 0;
+        text-align: justify;
+    }
+}
+
+/* Mobiles (480px et moins) */
+@media screen and (max-width: 480px) {
+    .dolisaas-content {
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .dolisaas-image-section {
+        padding: 0 5px;
+    }
+    
+    .dolisaas-text-section {
+        padding: 0 5px;
+    }
+}
+
+/* Petits mobiles (360px et moins) */
+@media screen and (max-width: 360px) {
+    .dolisaas-content {
+        gap: 8px;
+        padding: 0 5px;
+    }
+    
+    .dolisaas-image-section {
+        padding: 0;
+    }
+    
+    .dolisaas-text-section {
+        padding: 0;
+        font-size: 0.9em;
+    }
 }
 
 /* Très petits écrans (moins de 576px) */
@@ -531,7 +633,8 @@
     
     .dolisaas-text-section p,
     .custom-list li {
-        text-align: left;
+        text-align: justify;
+        max-width: 100%;
     }
 }
 
@@ -903,7 +1006,7 @@
   .pricing-container .image1 {
   width: 100% !important;
   height: auto;
-  border: red solid 1px;
+ 
 }
   .pricing-container .content-right {
     flex: 1 1 100%;
@@ -919,6 +1022,7 @@
     max-height: 150px;
   }
 }
+
 
 @media screen and (max-width: 480px) {
   .pricing-container {

@@ -222,4 +222,17 @@
   .footer-link:hover {
     transform: none;
   }
+  .Margin-start-scren-min{
+       margin-left: 50px;
+       
+  }
+  .input-responsive{
+      max-width:  300px;
+  }
+  .bouton-responsive{
+    max-width: 200px;
+     justify-content: center; 
+     margin-top: 5px;
+  }
+  
 }

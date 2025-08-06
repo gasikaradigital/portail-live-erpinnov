@@ -31,6 +31,7 @@
   .landing-faq h2 {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
   
   .landing-faq h2 img {
@@ -41,6 +42,7 @@
   .landing-faq .display-5 {
     font-weight: 700;
     color: #333;
+    text-align: center;
   }
   
   .landing-faq .fw-medium {
@@ -49,12 +51,15 @@
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
   
   /* Image sur le côté gauche */
   .faq-image {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
   
   .scaleX-n1-rtl {
@@ -68,12 +73,14 @@
   /* Style général de l'accordéon */
   .accordion {
     width: 100%;
+    max-width: 100%;
     border-radius: 8px;
     overflow: hidden;
     text-align: left;
     background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    margin: 0 auto;
   }
   
   .accordion-item {
@@ -149,14 +156,51 @@
   
   
   /* Responsive styles */
+  @media (max-width: 1200px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
   @media (max-width: 992px) {
     .landing-faq .row {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     
     .faq-image {
       max-width: 70%;
       margin-bottom: 2rem;
+    }
+    
+    .col-lg-5, .col-lg-7 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    
+    .accordion {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    .col-lg-5, .col-lg-7 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 95%;
+    }
+    
+    .faq-image {
+      max-width: 80%;
     }
   }
   
@@ -164,6 +208,17 @@
     .section-py {
       padding-top: 3rem;
       padding-bottom: 3rem;
+    }
+    
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .col-lg-5, .col-lg-7 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      max-width: 100%;
     }
     
     .accordion-button {
@@ -189,63 +244,29 @@
     }
   }
   
-  /* Utilitaires Bootstrap nécessaires si vous n'incluez pas Bootstrap complet */
-  .mb-2 {
-    margin-bottom: 0.5rem !important;
+  @media (max-width: 480px) {
+    .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    
+    .col-lg-5, .col-lg-7 {
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    
+    .accordion-button {
+      padding: 0.875rem;
+      font-size: 0.9rem;
+    }
+    
+    .accordion-body {
+      padding: 0.875rem;
+      font-size: 0.85rem;
+    }
   }
   
-  .mb-4 {
-    margin-bottom: 1.5rem !important;
-  }
   
-  .pb-4 {
-    padding-bottom: 1.5rem !important;
-  }
-  
-  .me-3 {
-    margin-right: 1rem !important;
-  }
-  
-  .text-center {
-    text-align: center !important;
-  }
-  
-  .text-uppercase {
-    text-transform: uppercase !important;
-  }
-  
-  .d-flex {
-    display: flex !important;
-  }
-  
-  .justify-content-center {
-    justify-content: center !important;
-  }
-  
-  .align-items-center {
-    align-items: center !important;
-  }
-  
-  .position-absolute {
-    position: absolute !important;
-  }
-  
-  .top-0 {
-    top: 0 !important;
-  }
-  
-  .end-0 {
-    right: 0 !important;
-  }
-  
-  /* Classes utilitaires pour les tailles de texte */
-  .fs-4 {
-    font-size: 1.5rem !important;
-  }
-  
-  .fw-bold {
-    font-weight: 700 !important;
-  }
   
   /* Définition de la classe mb-md-12 (spécifique à Bootstrap) */
   @media (min-width: 768px) {
@@ -257,6 +278,8 @@
   /* Classes pour la grille */
   .container {
     max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   @media (min-width: 576px) {
@@ -287,24 +310,34 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   
   .col-lg-5, .col-lg-7 {
     position: relative;
     width: 100%;
-    padding-right: 0px;
-    padding-left: 100px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
   
   @media (min-width: 992px) {
     .col-lg-5 {
       flex: 0 0 41.667%;
       max-width: 41.667%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .col-lg-7 {
       flex: 0 0 58.333%;
       max-width: 58.333%;
+    }
+    
+    .col-lg-5, .col-lg-7 {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
     }
   }
   
