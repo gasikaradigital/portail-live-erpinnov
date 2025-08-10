@@ -5,10 +5,61 @@ body {
   }
   
   /* ===== STYLES TEXTE ERP INNOV ===== */
-  .innov-text {
-    color: #0393da;
-    font-weight: 600;
+.innov-text {
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #0393da; /* Bleu pro */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px; /* fixe pour éviter que la navbar bouge */
+  position: relative;
+}
+
+#animated-text {
+  display: block;
+  white-space: nowrap;
+  position: relative;
+  animation-fill-mode: forwards;
+  width: 150px;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #0393da;
+}
+
+/* Animation de sortie vers la droite */
+.slide-out-right {
+  animation: slideOutRight 0.5s ease-in-out forwards;
+}
+
+/* Animation d'entrée depuis la gauche */
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
   }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
   
   /* ===== NAVBAR STYLES ===== */
   .layout-navbar {
@@ -122,94 +173,278 @@ body {
     transform: translateY(-2px);
   }
 
-  /* Responsive design pour petits écrans */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 8px 0;
-      width: 98%;
-      top: 10px;
-    }
-    
-    .navbar-brand {
-      margin-right: 1rem !important;
-    }
-    
-    .navbar-nav {
-      gap: 0.2rem;
-    }
-    
-    .nav-item {
-      margin: 0 0.1rem !important;
-    }
-    
-    .nav-link {
-      padding: 0.3rem 0.5rem !important;
-      font-size: 0.8rem;
-    }
-    
-    .nav-text {
-      font-size: 0.75rem;
-    }
-    
-    .btn-login,
-    .btn-inscription {
-      padding: 6px 8px;
-      font-size: 0.75rem;
-    }
-    
-    .tf-icons {
-      font-size: 1rem;
-    }
-  }
+/* ===== STYLES NAVIGATION MOBILE ===== */
+.mobile-nav {
+  display: none;
+}
 
-  /* Responsive design pour très petits écrans */
-  @media (max-width: 480px) {
-    .navbar {
-      padding: 6px 0;
-      top: 5px;
-    }
-    
-    .navbar-brand .innov-text {
-      font-size: 0.9rem;
-    }
-    
-    .navbar-nav {
-      gap: 0.1rem;
-    }
-    
-    .nav-item {
-      margin: 0 0.05rem !important;
-    }
-    
-    .nav-link {
-      padding: 0.2rem 0.3rem !important;
-      font-size: 0.7rem;
-    }
-    
-    .nav-text {
-      font-size: 0.7rem;
-    }
-    
-    .btn-login,
-    .btn-inscription {
-      padding: 4px 6px;
-      font-size: 0.7rem;
-    }
-    
-    .tf-icons {
-      font-size: 0.9rem;
-    }
-  }
+.mobile-nav-wrapper {
+  position: relative;
+}
 
-  /* Pour les écrans moyens et grands */
-  @media (min-width: 769px) {
-    .btn-login,
-    .btn-inscription {
-      padding: 10px 20px;
-      font-size: 1rem;
-    }
-    
-    .nav-link {
-      font-size: 1rem;
-    }
+.mobile-nav-section {
+  padding: 1rem 0;
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-nav-toggle:hover {
+  background-color: #f8f9fa;
+}
+
+.mobile-nav-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-toggle.active i {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  display: none;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
+
+.mobile-submenu.show {
+  display: block;
+}
+
+.mobile-submenu-link {
+  display: block;
+  padding: 0.75rem 2rem;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.mobile-submenu-link:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.mobile-auth-section {
+  padding: 1.5rem 1rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.mobile-auth-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.mobile-auth-link:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+/* ===== RESPONSIVE DESIGN MOBILE ===== */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #e9ecef;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
+  
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: block !important;
+  }
+  
+  .navbar-toggler {
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  /* Animation du bouton hamburger */
+  .navbar-toggler[aria-expanded="true"] #menuIcon {
+    display: none;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] #closeIcon {
+    display: inline-block !important;
+  }
+  
+  /* Masquer l'item Accueil sur mobile */
+  .desktop-nav .nav-item:first-child {
+    display: none;
+  }
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 40px 0; 
+    width: 100%;
+    padding-top:0%;
+    border-radius: 0%;
+  }
+  
+  .navbar-brand {
+    margin-right: 1rem !important;
+  }
+  
+  .navbar-nav {
+    gap: 0.2rem;
+  }
+  
+  .nav-item {
+    margin: 0 0.1rem !important;
+  }
+  
+  .nav-link {
+    padding: 0.3rem 0.5rem !important;
+    font-size: 0.8rem;
+  }
+  
+  .nav-text {
+    font-size: 0.75rem;
+  }
+  
+  .btn-login,
+  .btn-inscription {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+  
+  .tf-icons {
+    font-size: 1rem;
+  }
+  
+  /* Styles spécifiques navigation mobile */
+  .mobile-nav-toggle {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+  
+  .mobile-submenu-link {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .mobile-auth-link {
+    padding: 0.625rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Responsive design pour très petits écrans */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 6px 0;
+    top: 5px;
+  }
+  
+  .navbar-brand .innov-text {
+    font-size: 0.9rem;
+  }
+  
+  .navbar-nav {
+    gap: 0.1rem;
+  }
+  
+  .nav-item {
+    margin: 0 0.05rem !important;
+  }
+  
+  .nav-link {
+    padding: 0.2rem 0.3rem !important;
+    font-size: 0.7rem;
+  }
+  
+  .nav-text {
+    font-size: 0.7rem;
+  }
+  
+  .btn-login,
+  .btn-inscription {
+    padding: 4px 6px;
+    font-size: 0.7rem;
+  }
+  
+  .tf-icons {
+    font-size: 0.9rem;
+  }
+  
+  /* Styles spécifiques navigation mobile petits écrans */
+  .mobile-nav-toggle {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-submenu-link {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .mobile-auth-section {
+    padding: 1rem;
+  }
+  
+  .mobile-auth-link {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Pour les écrans moyens et grands */
+@media (min-width: 769px) {
+  .btn-login,
+  .btn-inscription {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Assurer que la navigation desktop est visible sur grands écrans */
+@media (min-width: 992px) {
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .desktop-nav {
+    display: flex !important;
+  }
+}

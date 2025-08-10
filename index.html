@@ -26,24 +26,27 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="layout-navbar container shadow-none py-0">
-    <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
-      <!-- Logo -->
-      <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4 align-items-center">
-        <span class="app-brand-logo demo">
-          <img src="assets/img/front-pages/logo/logo.png" alt="Logo ERP INNOV" style="width: 40px; height: 40px;" />
-        </span>
-        <span class="innov-text ms-2">ERP <span class="innov-text">INNOV</span></span>
-      </div>
-      
-      <!-- Bouton toggler pour mobile -->
-      <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggleMenu">
-        <i class="ri-menu-fill ri-24px align-middle" id="menuIcon"></i>
-      </button>
-      
-      <!-- Menu principal -->
-      <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto p-3 p-lg-0">
+ <nav class="layout-navbar  container shadow-none py-0">
+  <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
+    <!-- Logo -->
+    <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4 align-items-center">
+      <span class="app-brand-logo demo">
+        <img src="assets/img/front-pages/logo/logo.png" alt="Logo ERP INNOV" style="width: 40px; height: 40px;" />
+      </span>
+      <span id="animated-text" class="innov-text ms-2">ERP <span class="innov-text">INNOV</span></span>
+    </div>
+    
+    <!-- Bouton toggler pour mobile -->
+    <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggleMenu">
+      <i class="ri-close-line ri-24px align-middle d-none" id="closeIcon"></i>
+      <i class="ri-menu-3-line ri-24px align-middle" id="menuIcon"></i>
+    </button>
+    
+    <!-- Menu principal -->
+    <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+      <div class="mobile-nav-wrapper w-100">
+        <!-- Navigation desktop -->
+        <ul class="navbar-nav mx-auto p-4 p-lg-0 desktop-nav  justify-content-center">
           <li class="nav-item mx-2"><a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingHero" id="nav-landingHero"><i class="tf-icons ri-home-line"></i><span>Accueil</span></a></li>
           <li class="nav-item mx-2"><a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#landingGestion" id="nav-landingGestion"><i class="tf-icons ri-price-tag-line"></i><span>Gestion</span></a></li>
           <li class="nav-item mx-2"><a class="nav-link fw-medium px-3 d-flex align-items-center gap-2" href="#pricingSection" id="nav-landingPricing"><i class="tf-icons ri-price-tag-line"></i><span>Offres</span></a></li>
@@ -52,60 +55,152 @@
           <li class="nav-item mx-2" id="loginItem"><a href="https://portail.erpinnov.com" class="auth-link btn-login d-flex align-items-center"><i class="tf-icons ri-user-line me-md-1"></i><span class="d-inline">Connexion</span></a></li>
           <li class="nav-item mx-2" id="registerItem"><a href="https://portail.erpinnov.com/inscription" class="auth-link btn-inscription d-flex align-items-center"><i class="tf-icons ri-user-add-line me-md-1"></i><span class="d-inline">Inscription</span></a></li>
         </ul>
+        
+        <!-- Navigation mobile accordion -->
+        <div class="mobile-nav d-lg-none">
+  <div class="mobile-nav-section">
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-toggle" data-target="gestion-menu">
+        <span>Gestion</span>
+        <i class="ri-arrow-down-s-line"></i>
+      </button>
+      <div class="mobile-submenu" id="gestion-menu">
+        <a href="#landingGestion" class="mobile-submenu-link">
+          <i class="ri-archive-line"></i>
+          <span>Produit & Stock</span>
+        </a>
+        <a href="#landingGestion" class="mobile-submenu-link">
+          <i class="ri-bank-card-line"></i>
+          <span>Finance & Facturation</span>
+        </a>
+        <a href="#landingGestion" class="mobile-submenu-link">
+          <i class="ri-calculator-line"></i>
+          <span>Comptabilité</span>
+        </a>
+        <a href="#landingGestion" class="mobile-submenu-link">
+          <i class="ri-customer-service-line"></i>
+          <span>CRM & Ventes</span>
+        </a>
       </div>
     </div>
-  </nav>
+    
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-toggle" data-target="offres-menu">
+        <span>Offres</span>
+        <i class="ri-arrow-down-s-line"></i>
+      </button>
+      <div class="mobile-submenu" id="offres-menu">
+        <a href="#pricingSection" class="mobile-submenu-link">
+          <i class="ri-cloud-line"></i>
+          <span>Offre Dolibarr - DoliSaaS</span>
+        </a>
+        <a href="#pricingSection" class="mobile-submenu-link">
+          <i class="ri-user-line"></i>
+          <span>Offre ERPINNOV - SOLO</span>
+        </a>
+        <a href="#pricingSection" class="mobile-submenu-link">
+          <i class="ri-team-line"></i>
+          <span>Offre ERPINNOV - Standard</span>
+        </a>
+        <a href="#pricingSection" class="mobile-submenu-link">
+          <i class="ri-settings-3-line"></i>
+          <span>Solution personnalisée</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-toggle" data-target="faq-menu">
+        <span>FAQ</span>
+        <i class="ri-arrow-down-s-line"></i>
+      </button>
+      <div class="mobile-submenu" id="faq-menu">
+        <a href="#landingFAQ" class="mobile-submenu-link">
+          <i class="ri-question-line"></i>
+          <span>Questions générales</span>
+        </a>
+        <a href="#landingFAQ" class="mobile-submenu-link">
+          <i class="ri-tools-line"></i>
+          <span>Support technique</span>
+        </a>
+        <a href="#landingFAQ" class="mobile-submenu-link">
+          <i class="ri-money-dollar-circle-line"></i>
+          <span>Tarifs et facturation</span>
+        </a>
+        <a href="#landingFAQ" class="mobile-submenu-link">
+          <i class="ri-shield-check-line"></i>
+          <span>Sécurité</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mobile-auth-section">
+    <a href="https://portail.erpinnov.com" class="mobile-auth-link">
+      <i class="ri-user-line"></i>
+      <span>Connexion</span>
+    </a>
+    <a href="https://portail.erpinnov.com/inscription" class="mobile-auth-link">
+      <i class="ri-user-add-line"></i>
+      <span>Inscription</span>
+    </a>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</nav>
 
   <!-- Contenu principal -->
   <main>
-    <!-- Section Hero -->
-   <section id="landingHero" class="d-flex align-items-center  " style="padding-top: 70px; width: 100%;">
-      <div class="hero-bg">
-        <div class="gradient-blob blob-1"></div>
-        <div class="gradient-blob blob-2"></div>
-        <div class="gradient-blob blob-3"></div>
+   <!-- Section Hero -->
+<section id="landingHero" class="d-flex align-items-center  " style="padding-top: 70px; width: 100%;">
+  <div class="hero-bg">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    <div class="gradient-blob blob-3"></div>
+  </div>
+  <div class="container pb-3">
+    <div class="row align-items-center ">
+      <!-- Text Content -->
+      <div class="col-12 col-md-6 hero-content mx-auto order-2 order-md-1" data-aos="fade-up">
+        <h3 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+          <span class="gradient-text">Nos solutions</span> adaptées pour votre
+          <span class="highlight-text"> organisation</span>
+        </h3>
+        <p class="hero-description">
+          Découvrez comment ERP INNOV peut transformer votre activité. Que vous soyez entrepreneur individuel, TPE/PME en croissance, grande entreprise, association ou administration, nous vous offrons des solutions adaptées qui permettent :
+          <br /> 
+          
+          • <b class="b-description">Réduction des coûts opérationnels</b> : Optimisez vos dépenses et améliorez votre rentabilité.<br />
+          • <b class="b-description">Optimisation de la gestion</b> : Optimisez vos dépenses et améliorez votre rentabilité.<br />
+          • <b class="b-description">Croissance accélérée</b> : Adoptez des outils performants pour soutenir votre développement.
+         
+        </p>
+        <div class="hero-buttons mb-3" data-aos="fade-up" data-aos-delay="500">
+          <a href="/login" class="btn-primary ">
+            <span>En savoir plus, inscription gratuite</span>
+            <i class="ri-arrow-right-line ms-2"></i>
+          </a>
+        </div>
       </div>
-      <div class="container pb-3">
-        <div class="row align-items-center ">
-          <!-- Text Content -->
-          <div class="col-12 col-md-6 hero-content mx-auto" data-aos="fade-up">
-            <h3 class="hero-title" data-aos="fade-up" data-aos-delay="300">
-              <span class="gradient-text">Nos solutions</span> adaptées pour votre
-              <span class="highlight-text"> organisation</span>
-            </h3>
-            <p class="hero-description">
-              Découvrez comment ERP INNOV peut transformer votre activité. Que vous soyez entrepreneur individuel, TPE/PME en croissance, grande entreprise, association ou administration, nous vous offrons des solutions adaptées qui permettent :
-              <br /> 
-              
-              • <b class="b-description">Réduction des coûts opérationnels</b> : Optimisez vos dépenses et améliorez votre rentabilité.<br />
-              • <b class="b-description">Optimisation de la gestion</b> : Optimisez vos dépenses et améliorez votre rentabilité.<br />
-              • <b class="b-description">Croissance accélérée</b> : Adoptez des outils performants pour soutenir votre développement.
-             
-            </p>
-            <div class="hero-buttons mb-3" data-aos="fade-up" data-aos-delay="500">
-              <a href="/login" class="btn-primary ">
-                <span>En savoir plus, inscription gratuite</span>
-                <i class="ri-arrow-right-line ms-2"></i>
-              </a>
-            </div>
+      <!-- Dashboard Preview -->
+      <div class="col-lg-6  hero-dashboard order-1 order-md-2" data-aos="fade-left" data-aos-delay="300">
+        <div class="dashboard-wrapper">
+          <img src="assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="Dashboard Preview" class="dashboard-image" />
+          <div class="stats-card stats-card-1">
+            <div class="stats-indicator success"></div>
+            <span>+24% Croissance</span>
           </div>
-          <!-- Dashboard Preview -->
-          <div class="col-lg-6  hero-dashboard" data-aos="fade-left" data-aos-delay="300">
-            <div class="dashboard-wrapper">
-              <img src="assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="Dashboard Preview" class="dashboard-image" />
-              <div class="stats-card stats-card-1">
-                <div class="stats-indicator success"></div>
-                <span>+24% Croissance</span>
-              </div>
-              <div class="stats-card stats-card-2">
-                <div class="stats-indicator primary"></div>
-                <span>35% d'économies sur vos coûts</span>
-              </div>
-            </div>
+          <div class="stats-card stats-card-2">
+            <div class="stats-indicator primary"></div>
+            <span>35% d'économies sur vos coûts</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
     <!-- Section Modules / Gestion -->
     <section id="landingGestion" class="section-py" style="padding-top: 125px; ">
       <div class="container">
@@ -518,7 +613,7 @@
       <div class="align-items-between mb-4 ">
         <div class="row gy-8 gx-lg-4 m-2 ">
           <!-- Logo + newsletter -->
-          <div class="col-lg-3 col-md-6 col-12  border">
+          <div class="col-lg-3 col-md-6 col-12 border2 ">
             <a href="/" class="d-inline-flex align-items-center ">
               <img src="assets/img/front-pages/logo/logo.png" alt="Logo ERP INNOV" width="40" class="me-2" />
               <span class="fw-semibold fs-5">ERP INNOV</span>
@@ -537,7 +632,7 @@
           </div>
 
           <!-- Menu ERP INNOV -->
-          <div class="col-lg-3 col-md-6 col-12 border ">
+          <div class="col-lg-3 col-md-6 col-12 border2 ">
             <h6 class="footer-title">ERP INNOV</h6>
             <ul class="list-unstyled">
               <li> <i class="ri-settings-3-line me-2"></i><a href="#landingFeatures" class="footer-link">Fonctionnalités</a></li>
@@ -550,7 +645,7 @@
           </div>
 
           <!-- Menu Légal -->
-          <div class="col-lg-3 col-md-6 col-12  border ">
+          <div class="col-lg-3 col-md-6 col-12 border2">
             <h6 class="footer-title">Légal</h6>
             <ul class="list-unstyled">
               <li><i class="ri-shield-keyhole-line me-2"></i><a href="confidentialite.html" class="footer-link">Politique de confidentialité</a></li>
@@ -563,7 +658,7 @@
           </div>
 
           <!-- Contact rapide -->
-          <div class="col-lg-3 col-md-6 col-12 border   ">
+          <div class="col-lg-3 col-md-6 col-12 border2">
             <h6 class="footer-title">Contact</h6>
             <p class="footer-text "><i class="ri-map-pin-line me-1"></i> Madagascar</p>
             <p class="footer-text "><i class="ri-facebook-circle-fill me-1  "></i> Gasikara Digitale</p>
@@ -664,7 +759,7 @@ const offersContent = document.getElementById('offersContent');
 
 toggleBtn.addEventListener('click', () => {
 const isOpen = offersContent.classList.toggle('open');
-toggleBtn.textContent = isOpen ? 'voir moins «' : 'En savoir plus sur nos offres »';
+toggleBtn.textContent = isOpen ? 'Afficher moins «' : 'En savoir plus sur nos offres »';
 offersContent.setAttribute('aria-hidden', !isOpen);
 });
 
@@ -673,7 +768,7 @@ const offersContent2 = document.getElementById('offersContent2');
 
 toggleBtn2.addEventListener('click', () => {
 const isOpen = offersContent2.classList.toggle('open');
-toggleBtn2.textContent = isOpen ? 'Voir moins «' : 'En savoir plus sur nos offres »';
+toggleBtn2.textContent = isOpen ? 'Afficher moins «' : 'En savoir plus sur nos offres »';
 offersContent2.setAttribute('aria-hidden', !isOpen);
 });
 </script>
@@ -747,6 +842,113 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Gestion du bouton hamburger
+  const toggleButton = document.getElementById('toggleMenu');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeIcon = document.getElementById('closeIcon');
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+
+  // Gestion de l'accordion mobile
+  const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+  
+  mobileNavToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const targetMenu = document.getElementById(targetId);
+      const isActive = this.classList.contains('active');
+      
+      // Fermer tous les autres menus
+      mobileNavToggles.forEach(otherToggle => {
+        if (otherToggle !== this) {
+          otherToggle.classList.remove('active');
+          const otherTargetId = otherToggle.getAttribute('data-target');
+          const otherMenu = document.getElementById(otherTargetId);
+          if (otherMenu) {
+            otherMenu.classList.remove('show');
+          }
+        }
+      });
+      
+      // Toggle le menu actuel
+      if (isActive) {
+        this.classList.remove('active');
+        targetMenu.classList.remove('show');
+      } else {
+        this.classList.add('active');
+        targetMenu.classList.add('show');
+      }
+    });
+  });
+  
+  // Fermer le menu mobile lors du clic sur un lien
+  const mobileSubmenuLinks = document.querySelectorAll('.mobile-submenu-link');
+  const mobileAuthLinks = document.querySelectorAll('.mobile-auth-link');
+  
+  [...mobileSubmenuLinks, ...mobileAuthLinks].forEach(link => {
+    link.addEventListener('click', function() {
+      // Fermer le menu principal
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+      bsCollapse.hide();
+      
+      // Reset tous les accordions
+      mobileNavToggles.forEach(toggle => {
+        toggle.classList.remove('active');
+        const targetId = toggle.getAttribute('data-target');
+        const menu = document.getElementById(targetId);
+        if (menu) {
+          menu.classList.remove('show');
+        }
+      });
+    });
+  });
+  
+  // Écouter les événements Bootstrap collapse
+  navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+    // Reset tous les accordions quand le menu se ferme
+    mobileNavToggles.forEach(toggle => {
+      toggle.classList.remove('active');
+      const targetId = toggle.getAttribute('data-target');
+      const menu = document.getElementById(targetId);
+      if (menu) {
+        menu.classList.remove('show');
+      }
+    });
+  });
+});
+</script>
+<!-- texte erp innov animation -->
+<script>
+const textElement = document.getElementById('animated-text');
+const texts = ["ERP INNOV", "Erpinnov.com"];
+let index = 0;
+
+setInterval(() => {
+  // Animation de sortie vers la droite
+  textElement.classList.add('slide-out-right');
+  
+  setTimeout(() => {
+    // Changement du texte après la sortie
+    index = (index + 1) % texts.length;
+    textElement.textContent = texts[index];
+    
+    // Suppression de l'animation de sortie et ajout de l'animation d'entrée
+    textElement.classList.remove('slide-out-right');
+    textElement.classList.add('slide-in-left');
+    
+    // Suppression de l'animation d'entrée après qu'elle soit terminée
+    setTimeout(() => {
+      textElement.classList.remove('slide-in-left');
+    }, 500);
+    
+  }, 500); // temps de l'animation de sortie
+}, 5000); // toutes les 2 secondes
+</script>
+
+
   <script src="js/main.js"></script>
   <script src="js/hero-section.js"></script>
   <script src="js/sectionModule.js"></script>

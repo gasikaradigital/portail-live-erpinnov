@@ -62,6 +62,19 @@
 .footer-title:hover::after {
   width: 50px;
 }
+.border2 {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Variantes avec différentes opacités */
+.border2-light {
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.border2-medium {
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
 
 /* Links */
 .footer-link {

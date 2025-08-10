@@ -82,11 +82,11 @@
 
 .hero-title {
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.0;
     margin-bottom: 1.5rem;
     margin-top: -10px;
     transition: font-size 0.3s ease;
-    text-align: left;
+    text-align: justify;
 }
 
 .gradient-text {
