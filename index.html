@@ -854,16 +854,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(apiData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log("Réponse API: ", data);
-    })
-    .catch(error => {
-      consoloe.error("Erreur API :", error);
     });
-
-    console.log('Nom:', fullname, 'Email:', email, 'Contact:', contact, 'Pays:', country, 'Adresse:', address);
     
     // Fermer la popup après envoi
     closePopup();
