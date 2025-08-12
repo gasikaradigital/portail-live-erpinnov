@@ -820,7 +820,46 @@ document.addEventListener('DOMContentLoaded', function() {
     const country = document.getElementById('country').value;
     const address = document.getElementById('address').value;
     
-    // Ici vous pouvez ajouter votre logique d'envoi
+    // Condition par pays
+    if(country == "Madagascar") {
+      const urlDolibarr = "https://gmg.erpinnov.com";
+      const apiKey = "3at1TxcD44CYN4J9LJ23ldG6r7VrcdTu";
+      const country_id = 143;
+      const contry_code = "MG";
+    } else {
+      const urlDolibarr = "https://gfr.erpinnov.com";
+      const apiKey = "W1og6W7U30GHa3yt6j0Xq13znXXdCTTj";
+      const country_id = 1;
+      const contry_code = "FR";
+    }
+
+    //Injection des données
+    const apiData = {
+      'lastname': fullname,
+      'email': email,
+      'phone_mobile': contact,
+      'country_id': country_id,
+      'country_code': country_code,
+      'address': address
+    };
+    
+    fetch(`${urlDolibarr}/api/index.php/contacts`, {
+      method: "POST",
+      headers: {
+        "DOLAPIKEY": apiKey,
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(apiData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log("Réponse API: ", data);
+    })
+    .catch(error => {
+      consoloe.error("Erreur API :", error);
+    });
+
     console.log('Nom:', fullname, 'Email:', email, 'Contact:', contact, 'Pays:', country, 'Adresse:', address);
     
     // Fermer la popup après envoi
