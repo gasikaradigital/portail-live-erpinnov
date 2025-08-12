@@ -819,18 +819,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const contact = document.getElementById('contact').value;
     const country = document.getElementById('country').value;
     const address = document.getElementById('address').value;
-    
+    let urlDolibarr;
+    let apiKey;
+    let country_code;
+    let country_id;
     // Condition par pays
     if(country == "Madagascar") {
-      const urlDolibarr = "https://gmg.erpinnov.com";
-      const apiKey = "3at1TxcD44CYN4J9LJ23ldG6r7VrcdTu";
-      const country_id = 143;
-      const contry_code = "MG";
+      urlDolibarr = "https://gmg.erpinnov.com";
+      apiKey = "3at1TxcD44CYN4J9LJ23ldG6r7VrcdTu";
+      country_id = 143;
+      contry_code = "MG";
     } else {
-      const urlDolibarr = "https://gfr.erpinnov.com";
-      const apiKey = "W1og6W7U30GHa3yt6j0Xq13znXXdCTTj";
-      const country_id = 1;
-      const contry_code = "FR";
+      urlDolibarr = "https://gfr.erpinnov.com";
+      apiKey = "W1og6W7U30GHa3yt6j0Xq13znXXdCTTj";
+      country_id = 1;
+      country_code = "FR";
     }
 
     //Injection des données
