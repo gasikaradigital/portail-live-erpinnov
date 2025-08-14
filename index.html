@@ -13,7 +13,6 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <!-- Votre CSS personnalisé -->
-  <!-- <link href="index.css" rel="stylesheet"> -->
   <link href="css/hero.css" rel="stylesheet">
   <link href="css/naveBare.css" rel="stylesheet">
   <link href="css/sectionModule.css" rel="stylesheet">
@@ -29,11 +28,15 @@
  <nav class="layout-navbar  container shadow-none py-0">
   <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
     <!-- Logo -->
-    <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4 align-items-center">
+    <div class="navbar-brand app-brand demo d-flex me-4 align-items-center">
       <span class="app-brand-logo demo">
         <img src="assets/img/front-pages/logo/logo.png" alt="Logo ERP INNOV" style="width: 40px; height: 40px;" />
       </span>
-      <span id="animated-text" class="innov-text ms-2">ERP <span class="innov-text">INNOV</span></span>
+      <span  class="innov-text ">
+  <span class="erp-text desktop ms-2">ERP INNOV</span>
+  <span class="erp-text mobile ms-2">Erpinnov</span>
+  <span class="text-com ms-0">.com</span>
+</span>
     </div>
     
     <!-- Bouton toggler pour mobile -->
@@ -92,15 +95,11 @@
       <div class="mobile-submenu" id="offres-menu">
         <a href="#pricingSection" class="mobile-submenu-link">
           <i class="ri-cloud-line"></i>
-          <span>Offre Dolibarr - DoliSaaS</span>
+          <span>Solution <strong> Dolibarr DoliSaaS</strong>  2G/5G/10G </span>
         </a>
-        <a href="#pricingSection" class="mobile-submenu-link">
-          <i class="ri-user-line"></i>
-          <span>Offre ERPINNOV - SOLO</span>
-        </a>
-        <a href="#pricingSection" class="mobile-submenu-link">
+        <a href="#erpinnov-offer" class="mobile-submenu-link">
           <i class="ri-team-line"></i>
-          <span>Offre ERPINNOV - Standard</span>
+          <span>Solution <strong> ERPINNOV - SOLO </strong> </span>
         </a>
         <a href="#pricingSection" class="mobile-submenu-link">
           <i class="ri-settings-3-line"></i>
@@ -136,13 +135,13 @@
   </div>
   
   <div class="mobile-auth-section">
-    <a href="https://portail.erpinnov.com" class="mobile-auth-link">
+    <a href="https://portail.erpinnov.com" class=" mobile-auth-link mobile-auth-link-hover-login btn-login ">
       <i class="ri-user-line"></i>
-      <span>Connexion</span>
+      <span class="inline-text">Connexion</span>
     </a>
-    <a href="https://portail.erpinnov.com/inscription" class="mobile-auth-link">
+    <a href="https://portail.erpinnov.com/inscription" class=" mobile-auth-link mobile-auth-link-hover-registre btn-inscription  ">
       <i class="ri-user-add-line"></i>
-      <span>Inscription</span>
+      <span class="inline-text">Inscription</span>
     </a>
   </div>
 </div>
@@ -154,16 +153,11 @@
   <!-- Contenu principal -->
   <main>
    <!-- Section Hero -->
-<section id="landingHero" class="d-flex align-items-center  " style="padding-top: 70px; width: 100%;">
-  <div class="hero-bg">
-    <div class="gradient-blob blob-1"></div>
-    <div class="gradient-blob blob-2"></div>
-    <div class="gradient-blob blob-3"></div>
-  </div>
-  <div class="container pb-3">
-    <div class="row align-items-center ">
+<section id="landingHero" class="d-flex hero-mobile" style="padding-top: 70px; width: 100%;">
+  <div class="container  ">
+    <div class="row  hero-mobile">
       <!-- Text Content -->
-      <div class="col-12 col-md-6 hero-content mx-auto order-2 order-md-1" data-aos="fade-up">
+      <div class="col-12 col-md-6  hero-content mx-auto order-2  order-md-1" data-aos="fade-up">
         <h3 class="hero-title" data-aos="fade-up" data-aos-delay="300">
           <span class="gradient-text">Nos solutions</span> adaptées pour votre
           <span class="highlight-text"> organisation</span>
@@ -185,8 +179,8 @@
         </div>
       </div>
       <!-- Dashboard Preview -->
-      <div class="col-lg-6  hero-dashboard order-1 order-md-2" data-aos="fade-left" data-aos-delay="300">
-        <div class="dashboard-wrapper">
+      <div class="col-12 col-md-6 hero-dashboard  order-1 order-md-2" data-aos="fade-left" data-aos-delay="300">
+        <div class="dashboard-wrapper ">
           <img src="assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="Dashboard Preview" class="dashboard-image" />
           <div class="stats-card stats-card-1">
             <div class="stats-indicator success"></div>
@@ -262,7 +256,7 @@
         <h2 class="text-primary">Pourquoi DoliSaaS&nbsp;?</h2>
     </div>
 
-    <div class="container my-5 dolisaas-container">
+    <div  class="container my-5 dolisaas-container">
         <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12 col-12 p-4">
                 <h3 class="text-primary fw-bold mb-4">DoliSaaS - Dolibarr en ligne</h3>
@@ -405,7 +399,7 @@
     </div>
 
     <!-- Section Solo -->
-    <section id="pricingSection">
+    <section id="erpinnov-offer" id="pricingSection">
      <div class="container pricing-container my-5">
   <!-- Colonne gauche : image -->
   <div class="flex-shrink-0 image1">
@@ -416,7 +410,7 @@
   <div class="content-right">
     <h2>
       <img src="assets/img/front-pages/logo/logo.png" alt="section title icon" />
-      <span class="text-primary">ERPINNOV - SOLO</span>
+      <span class="text-primary"><strong>ERPINNOV - SOLO</strong></span>
     </h2>
 
     <div>
@@ -698,7 +692,7 @@
           <div class="input-container">
             <i class="ri-user-line input-icon"></i>
             <input type="text" id="fullname" class="form-input" required>
-            <label for="fullname" class="form-label">Nom et Prénoms</label>
+            <label for="fullname" class="form-label">Nom et Prénoms *</label>
           </div>
         </div>
         
@@ -706,14 +700,14 @@
           <div class="input-container">
             <i class="ri-mail-line input-icon"></i>
             <input type="email" id="email" class="form-input" required>
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">Email *</label>
           </div>
         </div>
         
         <div class="form-group">
           <div class="input-container">
             <i class="ri-phone-line input-icon"></i>
-            <input type="tel" id="contact" class="form-input" required>
+            <input type="tel" id="contact" class="form-input" >
             <label for="contact" class="form-label">Contact</label>
           </div>
         </div>
@@ -727,14 +721,14 @@
               <option value="france">France</option>
               <option value="autre">Autre pays</option>
             </select>
-            <label for="country" class="form-label select-label">Pays</label>
+            <label for="country" class="form-label select-label">Pays *</label>
           </div>
         </div>
         
         <div class="form-group">
           <div class="input-container">
             <i class="ri-map-pin-line input-icon"></i>
-            <input type="text" id="address" class="form-input" required>
+            <input type="text" id="address" class="form-input" >
             <label for="address" class="form-label">Adresse</label>
           </div>
         </div>
@@ -814,11 +808,39 @@ document.addEventListener('DOMContentLoaded', function() {
   // Gérer la soumission du formulaire
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const fullname = document.getElementById('fullname').value;
-    const email = document.getElementById('email').value;
-    const contact = document.getElementById('contact').value;
+    
+    const fullname = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
     const country = document.getElementById('country').value;
-    const address = document.getElementById('address').value;
+    const contact = document.getElementById('contact').value.trim();
+    const address = document.getElementById('address').value.trim();
+    
+    // Validation des champs obligatoires seulement
+    if (!fullname) {
+      alert('Veuillez saisir votre nom et prénoms.');
+      document.getElementById('fullname').focus();
+      return;
+    }
+    
+    if (!email) {
+      alert('Veuillez saisir votre email.');
+      document.getElementById('email').focus();
+      return;
+    }
+    
+    // Validation format email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Veuillez saisir un email valide.');
+      document.getElementById('email').focus();
+      return;
+    }
+    
+    if (!country) {
+      alert('Veuillez sélectionner votre pays.');
+      document.getElementById('country').focus();
+      return;
+    }
     
     // Ici vous pouvez ajouter votre logique d'envoi
     console.log('Nom:', fullname, 'Email:', email, 'Contact:', contact, 'Pays:', country, 'Adresse:', address);
@@ -835,8 +857,7 @@ document.addEventListener('DOMContentLoaded', function() {
   countrySelect.addEventListener('change', function() {
     const label = this.nextElementSibling;
     if (this.value !== '') {
-      label.style.top = '8px';
-      label.style.fontSize = '0.75rem';
+      label.style.transform = 'translateY(-40px)';
       label.style.color = '#007bff';
     }
   });
@@ -920,38 +941,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-<!-- texte erp innov animation -->
-<script>
-const textElement = document.getElementById('animated-text');
-const texts = ["ERP INNOV", "Erpinnov.com"];
-let index = 0;
-
-setInterval(() => {
-  // Animation de sortie vers la droite
-  textElement.classList.add('slide-out-right');
-  
-  setTimeout(() => {
-    // Changement du texte après la sortie
-    index = (index + 1) % texts.length;
-    textElement.textContent = texts[index];
-    
-    // Suppression de l'animation de sortie et ajout de l'animation d'entrée
-    textElement.classList.remove('slide-out-right');
-    textElement.classList.add('slide-in-left');
-    
-    // Suppression de l'animation d'entrée après qu'elle soit terminée
-    setTimeout(() => {
-      textElement.classList.remove('slide-in-left');
-    }, 500);
-    
-  }, 500); // temps de l'animation de sortie
-}, 5000); // toutes les 2 secondes
-</script>
 
 
   <script src="js/main.js"></script>
   <script src="js/hero-section.js"></script>
   <script src="js/sectionModule.js"></script>
-  <script src="js/footer-section.js"></script>
 </body>
 </html>

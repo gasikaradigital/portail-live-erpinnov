@@ -7,7 +7,7 @@ body {
   /* ===== STYLES TEXTE ERP INNOV ===== */
 .innov-text {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.5rem;
   color: #0393da; /* Bleu pro */
   overflow: hidden;
@@ -16,51 +16,8 @@ body {
   position: relative;
 }
 
-#animated-text {
-  display: block;
-  white-space: nowrap;
-  position: relative;
-  animation-fill-mode: forwards;
-  width: 150px;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-weight: 800;
-  font-size: 1.2rem;
-  color: #0393da;
-}
+.erp-text.mobile,.text-com { display: none; } /* Caché par défaut */
 
-/* Animation de sortie vers la droite */
-.slide-out-right {
-  animation: slideOutRight 0.5s ease-in-out forwards;
-}
-
-/* Animation d'entrée depuis la gauche */
-.slide-in-left {
-  animation: slideInLeft 0.5s ease-in-out forwards;
-}
-
-@keyframes slideOutRight {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-  
   /* ===== NAVBAR STYLES ===== */
   .layout-navbar {
     position: fixed;
@@ -243,7 +200,7 @@ body {
 
 .mobile-auth-section {
   padding: 1.5rem 1rem;
-  border-top: 2px solid #e9ecef;
+ 
 }
 
 .mobile-auth-link {
@@ -259,9 +216,13 @@ body {
   font-weight: 500;
 }
 
-.mobile-auth-link:hover {
-  background-color: #e9ecef;
-  color: #333;
+.mobile-auth-link-hover-registre:hover {
+    background-color: #ff8c00;
+  color: #ffffff;
+}
+.mobile-auth-link-hover-login:hover {
+    background-color: #0d6efd;
+  color: #ffffff;
 }
 
 /* ===== RESPONSIVE DESIGN MOBILE ===== */
@@ -275,6 +236,21 @@ body {
     border-top: 1px solid #e9ecef;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+  }
+  .erp-text.desktop { display: none; } /* Cache la version desktop */
+  .erp-text.mobile {
+    display: inline-block; /* Affiche la version mobile */
+    font-size: 1.6em;
+    color: rgba(2, 2,2,0.7); /* Noir RGBA */ 
+ 
+  }
+  .text-com {
+    display: inline;
+    font-size: 1em;
+    font-weight: normal;
+    color:  rgba(2, 2, 2, 0.7) ;
+    
+
   }
   
   .desktop-nav {
@@ -369,8 +345,8 @@ body {
 /* Responsive design pour très petits écrans */
 @media (max-width: 480px) {
   .navbar {
-    padding: 6px 0;
-    top: 5px;
+    padding: 8px 0;
+    top: 0px;
   }
   
   .navbar-brand .innov-text {
@@ -422,6 +398,7 @@ body {
   .mobile-auth-link {
     padding: 0.5rem;
     font-size: 0.8rem;
+    
   }
 }
 
