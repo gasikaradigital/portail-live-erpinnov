@@ -813,7 +813,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = document.getElementById('email').value.trim();
     const country = document.getElementById('country').value;
     const contact = document.getElementById('contact').value.trim();
-    const address = document.getElementById('address').value.trim();
     
     // Validation des champs obligatoires seulement
     if (!fullname) {
@@ -841,9 +840,44 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('country').focus();
       return;
     }
+
+    const address = document.getElementById('address').value;
+    let urlDolibarr;
+    let apiKey;
+    let country_code;
+    let country_id;
+    // Condition par pays
+    if(country == "madagascar") {
+      urlDolibarr = "https://gmg.erpinnov.com";
+      apiKey = "3at1TxcD44CYN4J9LJ23ldG6r7VrcdTu";
+      country_id = 143;
+      contry_code = "MG";
+    } else {
+      urlDolibarr = "https://gfr.erpinnov.com";
+      apiKey = "W1og6W7U30GHa3yt6j0Xq13znXXdCTTj";
+      country_id = 1;
+      country_code = "FR";
+    }
+
+    //Injection des données
+    const apiData = {
+      'lastname': fullname,
+      'email': email,
+      'phone_mobile': contact,
+      'country_id': country_id,
+      'country_code': country_code,
+      'address': address
+    };
     
-    // Ici vous pouvez ajouter votre logique d'envoi
-    console.log('Nom:', fullname, 'Email:', email, 'Contact:', contact, 'Pays:', country, 'Adresse:', address);
+    fetch(`${urlDolibarr}/api/index.php/contacts`, {
+      method: "POST",
+      headers: {
+        "DOLAPIKEY": apiKey,
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(apiData)
+    });
     
     // Fermer la popup après envoi
     closePopup();
