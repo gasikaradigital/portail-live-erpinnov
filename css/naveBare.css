@@ -129,6 +129,28 @@ body {
     color: #ff8c00;
     transform: translateY(-2px);
   }
+  /* État scrollé de la navbar */
+.navbar.scrolled {
+  top: 1px !important;
+  padding: 10px 0 !important;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .navbar-brand {
+  margin-left: 1rem !important;
+}
+
+/* Pour les écrans desktop uniquement */
+@media (min-width: 769px) {
+  .navbar.scrolled {
+    top: 0 !important;
+    padding: 10px 0 !important;
+  }
+  
+  .navbar.scrolled .navbar-brand {
+    margin-left: 1rem !important;
+  }
+}
 
 /* ===== STYLES NAVIGATION MOBILE ===== */
 .mobile-nav {
