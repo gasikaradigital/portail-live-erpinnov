@@ -394,6 +394,8 @@
     text-align: justify;
 
 }
+/* boutton accordiont */
+
 
 /* Media queries pour la responsivité */
 
@@ -475,6 +477,7 @@
         padding: 0;
         font-size: 0.9em;
     }
+   
 }
 
 /* Très petits écrans (moins de 576px) */
@@ -540,6 +543,7 @@
     .custom-list li {
         text-align: left;
     }
+    
 }
 
 /* Mobiles (576px à 767px) */
@@ -592,6 +596,7 @@
         text-align: left;
     }
 }
+
 
 /* Tablettes (768px à 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -673,14 +678,14 @@
     max-height: 2000px;
   }
 
-  #offersContent h3 {
+  #offersContent1 h3 {
     text-align: center;
     color: #276ef1;
     font-weight: 700;
     margin-bottom: 25px;
   }
 
-  #offersContent p.intro {
+  #offersContent1 p.intro {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 40px;

@@ -7,16 +7,25 @@ body {
   /* ===== STYLES TEXTE ERP INNOV ===== */
 .innov-text {
   font-weight: 800;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 2rem;
+  line-height: 1.6rem;
   color: #0393da; /* Bleu pro */
   overflow: hidden;
   white-space: nowrap;
-  width: 150px; /* fixe pour éviter que la navbar bouge */
+  width: 200px; /* fixe pour éviter que la navbar bouge */
   position: relative;
 }
-
-.erp-text.mobile,.text-com { display: none; } /* Caché par défaut */
+.erp-text-noir{
+  color: rgba(0, 0, 0, 0.7);
+}
+.text-com{
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color:  #000000;
+}
+.erp-text.mobile{ display: none; } 
+/* Caché par défaut */
 
   /* ===== NAVBAR STYLES ===== */
   .layout-navbar {
@@ -259,21 +268,23 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
-  .erp-text.desktop { display: none; } /* Cache la version desktop */
+  .erp-text.desktop { display:inline-block;  font-size: 1.7em;
+    color: #0d6efd; } /* Cache la version desktop */
   .erp-text.mobile {
     display: inline-block; /* Affiche la version mobile */
     font-size: 1.6em;
-    color: rgba(2, 2,2,0.7); /* Noir RGBA */ 
+    color: #0d6efd; /* Noir RGBA */ 
  
   }
   .text-com {
     display: inline;
     font-size: 1em;
     font-weight: normal;
-    color:  rgba(2, 2, 2, 0.7) ;
-    
-
+    color:  #000000;
   }
+  .erp-text-noir{
+  color: rgba(0, 0, 0, 0.7);
+}
   
   .desktop-nav {
     display: none !important;

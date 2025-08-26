@@ -266,7 +266,7 @@
 }
 
 .newsletter-popup {
-  background: var(--footer-bg-color);
+  background: #ffffff;
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
@@ -307,7 +307,7 @@
 .newsletter-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff;
+  color: #000000; /* Changé en noir */
 }
 
 .newsletter-form {
@@ -329,7 +329,7 @@
 .input-icon {
   position: absolute;
   left: 12px;
-  color: #6c757d;
+  color: #495057;
   font-size: 1.1rem;
   z-index: 2;
 }
@@ -337,30 +337,35 @@
 .form-input {
   width: 100%;
   padding: 1rem 1rem 0.5rem 2.8rem;
-  border: 2px solid #dee2e6;
+  border: 2px solid #ced4da;
   border-radius: 8px;
   background: transparent;
-  color: #dee2e6;
+  color: #000000;
   font-size: 1rem;
   transition: all 0.3s ease;
   outline: none;
 }
 
 .form-input:focus {
-  border-color: #007bff;
+  border-color: #000000;
 }
 
+/* CORRECTION : Ajouter .select-label aux sélecteurs d'animation */
 .form-input:focus + .form-label,
 .form-input:valid + .form-label,
 .form-input:not(:placeholder-shown) + .form-label,
 .form-select:focus + .form-label,
 .form-select:valid + .form-label,
-.form-select:not([value=""]) + .form-label {
+.form-select:not([value=""]) + .form-label,
+.form-select:focus + .select-label,
+.form-select:valid + .select-label,
+.form-select:not([value=""]) + .select-label {
   top: 8px;
   transform: translateY(-20px);
   font-size: 0.75rem;
-  color: #007bff;
+  color: #000000;
 }
+
 .select-container {
   position: relative;
   display: flex;
@@ -370,54 +375,60 @@
 .form-select {
   width: 100%;
   padding: 1rem 1rem 0.5rem 2.8rem;
-  border: 2px solid #dee2e6;
+  border: 2px solid #ced4da;
   border-radius: 8px;
-  background: var(--footer-bg-color);
-  color: #dee2e6;
+  background: #ffffff;
+  color: #000000;
   font-size: 1rem;
   transition: all 0.3s ease;
   outline: none;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23dee2e6' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23495057' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 12px;
 }
 
 .form-select:focus {
-  border-color: #007bff;
+  border-color: #000000;
 }
 
 .form-select option {
-  background: var(--footer-bg-color);
-  color: #dee2e6;
+  background: #ffffff;
+  color: #000000;
 }
 
-.select-label {
-  position: absolute;
-  left: 2.8rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #6c757d;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  background: var(--footer-bg-color);
-  padding: 0 4px;
-}
-
+/* CORRECTION : Uniformiser le style des labels */
+.select-label,
 .form-label {
   position: absolute;
   left: 2.8rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #6c757d;
+  color: #495057;
   font-size: 1rem;
   transition: all 0.3s ease;
   pointer-events: none;
-  background: var(--footer-bg-color);
+  background: #ffffff;
+  padding: 0 4px;
+  z-index: 1;
+}
+
+/* Supprimer la duplication inutile */
+/*
+.form-label {
+  position: absolute;
+  left: 2.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #495057;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background: #ffffff;
   padding: 0 4px;
 }
+*/
 
 .form-buttons {
   display: flex;
@@ -444,22 +455,25 @@
 
 .btn-cancel-1 {
   background: transparent;
-  color: #6c757d;
-  border: 2px solid #6c757d;
+  color: #495057;
+  border: 1px solid #495057; /* Toujours 1px solid */
+  box-sizing: border-box; /* Important pour éviter le déplacement */
 }
 
 .btn-cancel-1:hover {
-  background: #6c757d;
+  background: #fd9210; 
   color: white;
+  color: white;
+  border: 1px solid #fd9210;; /* Même bordure au survol */
 }
 
 .btn-primary-1 {
-  background: #007bff;
+  background: #3184ff ;
   color: white;
 }
 
 .btn-primary-1:hover {
-  background: #0056b3;
+  background: #0167ff ;
 }
 
 /* Responsive Design */
